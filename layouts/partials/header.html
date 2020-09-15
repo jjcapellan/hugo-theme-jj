@@ -6,12 +6,10 @@
         {{ if .Site.Params.brand.name }}
         <span id="brand-name">{{ .Site.Params.brand.name }}</span>
         {{ end }}
-        <nav id="header-nav">
-            <ul class="menu">                
-                {{ range .Site.Menus.main }}
-                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-                {{ end }}
-            </ul>
+        <nav id="header-nav">              
+            {{ range .Site.Menus.main }}
+            <a href="{{ .URL }}">{{ .Name }}</a>
+            {{ end }}
         </nav>
     </div>
 </header>

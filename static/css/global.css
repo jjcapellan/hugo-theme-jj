@@ -7,3 +7,38 @@ html {
 	font-family: 'Lato', 'sans-serif';
 	font-size: 16px;
 }
+
+#header {
+    height: 90px;
+    width: 100%;
+    padding-top: 10px;
+}
+#inner-header {
+    margin: auto;
+    display: flex;
+    width: var(--content-width);
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+#brand-logo {
+    height: 100%;
+    margin-right: 0.5rem;
+}
+#brand-name {
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 3rem;
+}
+#header-nav{
+    display: flex;
+}
+#header-nav > a {
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+}
+#header-nav > a:hover {
+    color: #964444;
+    text-decoration: underline;
+}
