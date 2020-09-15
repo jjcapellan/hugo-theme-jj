@@ -1,5 +1,10 @@
 {{ define "main" }}
-<div class="column-box">
-        <h1>List</h1>
+<div class="content">
+        {{ range .Pages }}
+        <h2>
+                <a class="post-link" href="{{ .Permalink }}">{{ .Title}}</a>
+        </h2>
+        <p>{{ .Summary}}<p><hr>
+        {{ end }}
 </div>
 {{ end }}
