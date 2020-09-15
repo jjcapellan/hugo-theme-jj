@@ -1,0 +1,17 @@
+<header id="header">
+    <div id="inner-header">
+        {{ if .Site.Params.brand.logo}}
+        <img id="brand-logo" src="{{ .Site.Params.brand.logo }}">
+        {{ end }}
+        {{ if .Site.Params.brand.name }}
+        <span id="brand-name">{{ .Site.Params.brand.name }}</span>
+        {{ end }}
+        <nav id="header-nav">
+            <ul class="menu">                
+                {{ range .Site.Menus.main }}
+                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                {{ end }}
+            </ul>
+        </nav>
+    </div>
+</header>
