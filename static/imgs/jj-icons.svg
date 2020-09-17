@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <symbol id="tag" viewBox="0 0 600 600">
+   <path d="m542.78 57.225-194.91 0.77652-290.42 290.42 194.13 194.13 290.42-290.42zm-78.606 79.243a26.398 26.398 45 0 1-1e-3 37.332 26.398 26.398 45 0 1-37.332 1e-3 26.398 26.398 45 0 1 0-37.334 26.398 26.398 45 0 1 37.334 1e-5z" style="stroke-width:1.0982px;stroke:#000">  
+   </path>
+  </symbol>
+<symbol id="calendar" viewBox="0 0 600 600">
+   <path d="m100,50v75H50V225H550V125H500V50h-50v75H150V50Zm13,12h25v113h-25zm349,0h25V175H462ZM50,250V550H550V250Z" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:0;stroke:#000">
+   </path>
+  </symbol>
+ </defs> 
+</svg>
