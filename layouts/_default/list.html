@@ -3,6 +3,7 @@
         {{ range .Pages }}
         <h2>
                 <a class="post-link" href="{{ .Permalink }}">{{ .Title}}</a>
+                <span class="post-info">{{ .Date.Format "2006 Jan 02"}}</span>
         </h2>
         <p>{{ .Summary}}<p><hr>
         {{ end }}
