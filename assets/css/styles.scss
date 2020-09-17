@@ -59,8 +59,14 @@ hr{
     text-decoration: none;
 }
 .post-info{
-  display: block;
   font-size: 0.7rem;
   font-weight: 100;
-  opacity: 0.4;
+}
+.post-data{
+  opacity:0.4;
+  line-height: 0;
+}
+.icon{
+  width: 0.9rem;
+  height: 0.9rem;
 }
