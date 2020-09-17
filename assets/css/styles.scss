@@ -1,6 +1,7 @@
 
 $color-background: #ffffff;
 $content-width: 760px;
+$brand-font-size: 3rem;
 
 html {
   background-color: $color-background;
@@ -13,7 +14,6 @@ hr{
 }
 
 #header {
-  height: 90px;
   width: 100%;
   padding-top: 10px;
   margin-bottom: 6rem;
@@ -21,19 +21,20 @@ hr{
 #inner-header {
   margin: auto;
   display: flex;
-  width: $content-width;
+  flex-wrap: wrap;
+  max-width: $content-width;
   height: 100%;
   align-items: center;
   justify-content: space-between;
 }
 #brand-logo {
-  height: 100%;
+  height: $brand-font-size + 0.5rem;
   margin-right: 0.5rem;
 }
 #brand-name {
   margin-right: auto;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: $brand-font-size;
 }
 
 #header-nav {
@@ -50,7 +51,7 @@ hr{
 }
 
 .content {
-  width: $content-width;
+  max-width: $content-width;
   margin: auto;
 }
 .post-link{
