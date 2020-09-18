@@ -2,11 +2,33 @@
 $color-background: #ffffff;
 $content-width: 760px;
 $brand-font-size: 3rem;
+$color-link: #d64933;
 
 html {
   background-color: $color-background;
   font-family: "Lato", "sans-serif";
   font-size: 18px;
+}
+a{
+  text-decoration: none;
+  color: $color-link;
+  position: relative;
+  &:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: $color-link;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: .1s ease-out;
+  }
+  &:hover:before{
+    visibility: visible;
+    transform: scaleX(1);
+  }
 }
 hr{
     margin-bottom: 4.5rem;
@@ -40,23 +62,14 @@ hr{
 #header-nav {
   display: flex;
   a {
-    text-decoration: none;
     color: black;
-    padding: 1rem;
-  }
-  a:hover {
-    color: #964444;
-    text-decoration: underline;
+    margin: 1rem;
   }
 }
 
 .content {
   max-width: $content-width;
   margin: auto;
-}
-.post-link{
-    color: black;
-    text-decoration: none;
 }
 .post-data{
   line-height: 0;
@@ -66,6 +79,9 @@ hr{
 .post-tag{
   margin: 0 0.3rem;
   text-decoration: none;
+  &:hover:before{
+    height: 1px;
+  }
 }
 .icon{
   width: 0.9rem;
