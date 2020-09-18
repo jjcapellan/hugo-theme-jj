@@ -6,6 +6,10 @@ $font-size-footer: 0.8rem;
 $color-link: #d64933;
 $color-footer-background:#231f20;
 $color-footer-foreground:#f8e9e9;
+$color-header-background:oldlace;
+$color-header-foreground: #000000;
+$color-brand-name: $color-header-foreground;
+$color-brand-logo-fill: $color-link;
 
 html {
   background-color: $color-background;
@@ -40,8 +44,9 @@ hr{
 
 #header {
   width: 100%;
-  padding-top: 10px;
+  padding: 20px 0.5rem;
   margin-bottom: 6rem;
+  background-color: $color-header-background;
 }
 #inner-header {
   margin: auto;
@@ -54,12 +59,15 @@ hr{
 }
 #brand-logo {
   height: $brand-font-size + 0.5rem;
+  width: $brand-font-size + 0.5rem;
   margin-right: 0.5rem;
+  fill: $color-brand-logo-fill;
 }
 #brand-name {
   margin-right: auto;
   font-weight: bold;
   font-size: $brand-font-size;
+  color: $color-brand-name;
 }
 #footer{
   padding: 2rem 1rem;

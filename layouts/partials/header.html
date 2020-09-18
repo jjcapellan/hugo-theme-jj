@@ -1,7 +1,7 @@
 <header id="header">
     <div id="inner-header">
         {{ if .Site.Params.brand.logo}}
-        <img id="brand-logo" src="{{ .Site.Params.brand.logo }}">
+        <svg id="brand-logo"><use href="{{ .Site.Params.brand.logo }}"></use></svg>
         {{ end }}
         {{ if .Site.Params.brand.name }}
         <span id="brand-name">{{ .Site.Params.brand.name }}</span>
