@@ -2,7 +2,10 @@
 $color-background: #ffffff;
 $content-width: 760px;
 $brand-font-size: 3rem;
+$font-size-footer: 0.8rem;
 $color-link: #d64933;
+$color-footer-background:#231f20;
+$color-footer-foreground:#f8e9e9;
 
 html {
   background-color: $color-background;
@@ -58,7 +61,12 @@ hr{
   font-weight: bold;
   font-size: $brand-font-size;
 }
-
+#footer{
+  padding: 2rem 1rem;
+  font-size: $font-size-footer;
+  background-color: $color-footer-background;
+  color: $color-footer-foreground;
+}
 #header-nav {
   display: flex;
   a {
@@ -66,10 +74,14 @@ hr{
     margin: 1rem;
   }
 }
-
 .content {
   max-width: $content-width;
   margin: auto;
+}
+.flex-column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
 }
 .post-data{
   line-height: 0;
