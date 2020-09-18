@@ -13,7 +13,11 @@
                 <a href="/tags/{{ . | urlize }}" class="post-tag">#{{ . }}  </a>
                 {{ end }}
         </div>
-        <p>{{ .Summary}}<p><hr>
+        <p>{{ .Summary}}<p>
+        <div style="text-align: right;">
+                <a href="{{ .Permalink }}">Read more</a>
+        </div>
+        <hr>
         {{ end }}
 </div>
 {{ end }}
