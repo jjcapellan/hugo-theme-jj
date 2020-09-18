@@ -58,13 +58,14 @@ hr{
     color: black;
     text-decoration: none;
 }
-.post-info{
+.post-data{
+  line-height: 0;
   font-size: 0.7rem;
   font-weight: 100;
 }
-.post-data{
-  opacity:0.4;
-  line-height: 0;
+.post-tag{
+  margin: 0 0.3rem;
+  text-decoration: none;
 }
 .icon{
   width: 0.9rem;

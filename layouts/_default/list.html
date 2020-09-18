@@ -2,12 +2,17 @@
 <div class="content">
         {{ range .Pages }}
         <h2>
-                <a class="post-link" href="{{ .Permalink }}">{{ .Title}}</a>
-                <div class="post-data">
-                <svg class="icon"><use href="/imgs/jj-icons.svg#calendar"></use></svg>
-                <span class="post-info">{{ .Date.Format "2006 Jan 02"}}</span>
-                </div>
+                <a class="post-link" href="{{ .Permalink }}">{{ .Title}}</a>                
         </h2>
+        <div class="post-data">
+                <span>{{ .Date.Format "2006-Jan-02"}}</span>
+                <svg class="icon">
+                        <use href="/imgs/jj-icons.svg#tag"></use>
+                </svg>
+                {{ range .Params.tags}}
+                <a href="/tags/{{ . | urlize }}" class="post-tag">#{{ . }}  </a>
+                {{ end }}
+        </div>
         <p>{{ .Summary}}<p><hr>
         {{ end }}
 </div>
