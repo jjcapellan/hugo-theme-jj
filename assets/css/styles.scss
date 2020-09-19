@@ -5,13 +5,15 @@ $font-size-base: 18px;
 $font-size-brand: 3rem;
 $font-size-footer: 0.8rem;
 $color-link: #d64933;
+$color-post-title: #16596b;
 $color-thead-bottom-border: $color-link;
 $color-footer-background:#231f20;
 $color-footer-foreground:#f8e9e9;
 $color-header-background:oldlace;
 $color-header-foreground: #000000;
-$color-brand-name: $color-header-foreground;
+$color-brand-name: $color-post-title;
 $color-brand-logo-fill: $color-link;
+
 
 html {
   background-color: $color-background;
@@ -135,9 +137,13 @@ th, td {
     height: 1px;
   }
 }
+.color-title{
+  color: $color-post-title;
+}
 .icon{
   width: 0.9rem;
   height: 0.9rem;
+  opacity: 0.6;
 }
 .wrapper{
   display: flex;
