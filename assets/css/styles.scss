@@ -43,16 +43,11 @@ hr{
 }
 
 #header {
-  width: 100%;
-  padding: 20px 0.5rem;
-  margin-bottom: 6rem;
   background-color: $color-header-background;
 }
 #inner-header {
-  margin: auto;
   display: flex;
   flex-wrap: wrap;
-  max-width: $content-width;
   height: 100%;
   align-items: center;
   justify-content: space-between;
@@ -70,7 +65,6 @@ hr{
   color: $color-brand-name;
 }
 #footer{
-  padding: 2rem 1rem;
   font-size: $font-size-footer;
   background-color: $color-footer-background;
   color: $color-footer-foreground;
@@ -82,9 +76,15 @@ hr{
     margin: 1rem;
   }
 }
-.content {
+.content-padding {
+  padding: 4rem 0;
+}
+.container-padding{
+  padding: 2rem 0.5rem;
+}
+.inner-container{
   max-width: $content-width;
-  margin: auto;
+  margin: 0 auto;
 }
 .flex-column{
   display: flex;
