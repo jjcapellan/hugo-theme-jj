@@ -4,6 +4,7 @@ $content-width: 760px;
 $brand-font-size: 3rem;
 $font-size-footer: 0.8rem;
 $color-link: #d64933;
+$color-thead-bottom-border: $color-link;
 $color-footer-background:#231f20;
 $color-footer-foreground:#f8e9e9;
 $color-header-background:oldlace;
@@ -45,7 +46,7 @@ hr{
     opacity: 0.4;
 }
 thead {
-	border-bottom: 2px solid #000000;
+	border-bottom: 2px solid $color-thead-bottom-border;
 	color: #000000;
 }
 th, td {
@@ -125,4 +126,12 @@ th, td {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+}
+.highlight {
+  pre{
+    padding: 0.5rem;
+  }
+  code{
+    font-size: 0.8rem;
+  }
 }
