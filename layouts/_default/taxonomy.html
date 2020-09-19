@@ -1,0 +1,34 @@
+{{ define "main" }}
+<div class="inner-container content-padding">
+    <h1>Tags</h1><hr>
+
+    {{ $maxCount := 1 }}
+    {{ $minCount := 1 }}
+    {{ $maxSize := 200 }}
+    {{ $minSize := 90 }}
+    {{ $fontSize := $minSize}}
+    {{ $sizeGape := sub $maxSize $minSize }}
+
+    <!-- Gets max and min tag counts -->
+    {{range first 1 .Data.Terms.ByCount}}
+    {{ $maxCount = .Count}}
+    {{ end }}
+    {{range last 1 .Data.Terms.ByCount}}
+    {{ $minCount = .Count}}
+    {{ end }}
+    {{ $countGape := sub $maxCount $minCount }}
+
+    {{ range .Data.Terms.Alphabetical }}
+    {{ if ne .Page.Name "index"}}
+    {{ $count := .Count}}
+    {{ if $countGape }}
+    {{ $fontSize = add (math.Round (mul (div (sub $count $minCount) $countGape) $sizeGape)) $minSize }}
+    {{ else }}
+    {{ $fontSize = $minSize }}
+    {{ end }}
+    <a class="tag" href="{{.Page.Permalink}}"
+        style="font-size:{{ $fontSize }}%;margin-right:0.5rem;">{{ .Page.Name }}</a>
+    {{ end }}
+    {{ end }}
+</div>
+{{ end }}

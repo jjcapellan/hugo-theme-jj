@@ -1,0 +1,26 @@
+{{ define "main" }}
+<div class="inner-container content-padding">
+        <h1>{{ .Title }}</h1><hr>
+        
+        {{ range .Pages }}
+            <h2>
+                <a href="{{ .Permalink }}">{{ .Title}}</a>                
+        </h2>
+        <div class="post-data">
+                <span>{{ .Date.Format "2006-Jan-02"}}</span>
+                <svg class="icon">
+                        <use href="/imgs/jj-icons.svg#tag"></use>
+                </svg>
+                {{ range .Params.tags}}
+                <a href="/tags/{{ . | urlize }}" class="post-tag">#{{ . }}  </a>
+                {{ end }}
+        </div>
+        <p>{{ .Summary}}<p>
+        <div style="text-align: right;">
+                <a href="{{ .Permalink }}">Read more</a>
+        </div>
+        <hr>
+        {{ end }}
+        
+</div>
+{{ end }}
