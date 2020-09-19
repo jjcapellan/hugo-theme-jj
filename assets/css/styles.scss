@@ -14,7 +14,10 @@ $color-brand-logo-fill: $color-link;
 html {
   background-color: $color-background;
   font-family: "Lato", "sans-serif";
-  font-size: 18px;
+  font-size: 18px;  
+}
+html,body{
+  height: 100%;
 }
 a{
   text-decoration: none;
@@ -76,11 +79,15 @@ hr{
     margin: 1rem;
   }
 }
+#content{
+  flex-grow: 1;
+}
 .content-padding {
-  padding: 4rem 0;
+  padding: 4rem 0;  
 }
 .container-padding{
   padding: 2rem 0.5rem;
+  flex-shrink: 0;
 }
 .inner-container{
   max-width: $content-width;
@@ -106,4 +113,9 @@ hr{
 .icon{
   width: 0.9rem;
   height: 0.9rem;
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
