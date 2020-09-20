@@ -178,7 +178,7 @@ table{
     font-size: 0.8rem;
   }
 }
-blockquote {
+blockquote:not(.twitter-tweet):not(.instagram-media) {
   position: relative;
   opacity: 0.5;
   margin: 3rem;
