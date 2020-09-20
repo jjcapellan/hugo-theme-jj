@@ -58,15 +58,16 @@ hr {
   margin-bottom: 4.5rem;
   opacity: 0.4;
 }
-thead {
-  border-bottom: 2px solid $color-thead-bottom-border;
-  color: #000000;
+table{
+  border: 1px solid #16596b;
+  thead {
+    color: $color-header-foreground;
+    background-color: $color-header-background;
+  }
+  th,td {
+    padding: 0.1rem 0.5rem;
+  }
 }
-th,
-td {
-  padding: 0.1rem 0.5rem;
-}
-
 #header {
   background-color: $color-header-background;
 }
