@@ -120,16 +120,18 @@ td {
   flex-direction: column;
   align-items: center;
 }
-.post-data {
-  line-height: 0;
-  font-size: 0.7rem;
-  font-weight: 100;
-}
-.post-tag {
-  margin: 0 0.3rem;
-  text-decoration: none;
-  &:hover:before {
-    height: 1px;
+.post{
+  &-data {
+    line-height: 0;
+    font-size: 0.7rem;
+    font-weight: 100;
+  }
+  &-tag {
+    margin: 0 0.3rem;
+    text-decoration: none;
+    &:hover:before {
+      height: 1px;
+    }
   }
 }
 .color-title {
@@ -161,12 +163,12 @@ blockquote {
   padding-left: 1em;
   font-size: 1.5rem;
   font-weight: 100;
-}
-blockquote::before {
-  position: absolute;
-  top: -2rem;
-  left: -2rem;
-  font-family: sans-serif;
-  font-size: 6rem;
-  content: "\201C";
+  &::before{
+    position: absolute;
+    top: -2rem;
+    left: -2rem;
+    font-family: sans-serif;
+    font-size: 6rem;
+    content: "\201C";
+  }
 }
