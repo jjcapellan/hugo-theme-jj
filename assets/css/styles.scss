@@ -8,10 +8,10 @@ $color-post-title: #16596b;
 $color-thead-bottom-border: $color-link;
 $color-footer-background: #231f20;
 $color-footer-foreground: #f8e9e9;
-$color-header-background: oldlace;
-$color-header-foreground: #000000;
-$color-brand-name: $color-post-title;
-$color-brand-logo-fill: $color-link;
+$color-header-background: #16596b;
+$color-header-foreground: white;
+$color-brand-name: $color-header-foreground;
+$color-brand-logo-fill: $color-header-foreground;
 
 html {
   background-color: $color-background;
@@ -97,8 +97,29 @@ td {
 #header-nav {
   display: flex;
   a {
-    color: black;
+    color: $color-header-foreground;
+    font-weight: 700;
     margin: 1rem;
+    position:relative;
+    transition: color 0.2s;    
+    &::before{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: $color-header-foreground;
+      opacity: 0;
+      transition: width 0.3s;
+    }
+    &:hover{
+      text-shadow: unset;
+      &::before{
+        width: 100%;
+        opacity: 1;
+      }
+    }
   }
 }
 #content {
