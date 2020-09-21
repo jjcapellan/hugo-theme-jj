@@ -127,8 +127,12 @@ table{
 #content {
   flex-grow: 1;
 }
-#tb-search{
-  display: none;
+#tbsearch{
+  opacity: 0;
+  width: 0;
+  transition: width .2s, opacity 0.2s;
+  transition-timing-function: ease-out;
+  margin-right: 0;  
 }
 .header-icon{
   fill: $color-header-foreground;
@@ -138,6 +142,9 @@ table{
   height: 2rem;
   margin: 0.4rem;
   padding: 0.4rem;
+}
+.clickable:hover{
+  cursor: pointer;
 }
 .content-padding {
   padding: 4rem 0;
