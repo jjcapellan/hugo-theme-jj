@@ -9,13 +9,13 @@
         <nav id="header-nav">              
             {{ range .Site.Menus.main }}
             <a href="{{ .URL }}">{{ .Name }}</a>
-            {{ end }}
-            <form action="/search/" method="GET">
-                <input type="text" name="term" id="tb-search" placeholder="Enter term to search">
-                <svg class="header-icon">
-                    <use href="/imgs/jj-icons.svg#search"></use>
-                </svg>
-            </form>
+            {{ end }}            
         </nav>
+        <form action="/search/" method="GET">
+            <input type="text" name="term" id="tbsearch" placeholder="Enter term to search">
+            <svg id="btsearch" class="header-icon">
+                <use href="/imgs/jj-icons.svg#search"></use>
+            </svg>
+        </form>
     </div>
 </header>
