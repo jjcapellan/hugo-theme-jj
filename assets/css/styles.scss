@@ -97,6 +97,7 @@ table{
 }
 #header-nav {
   display: flex;
+  align-items: center;
   a {
     color: $color-header-foreground;
     font-weight: 700;
@@ -125,6 +126,18 @@ table{
 }
 #content {
   flex-grow: 1;
+}
+#tb-search{
+  display: none;
+}
+.header-icon{
+  fill: $color-header-foreground;
+  stroke: $color-header-foreground;
+  stroke-width: 1px;
+  width: 2rem;
+  height: 2rem;
+  margin: 0.4rem;
+  padding: 0.4rem;
 }
 .content-padding {
   padding: 4rem 0;
