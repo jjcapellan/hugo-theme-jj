@@ -3,6 +3,7 @@
 const btSearch = document.getElementById('btsearch');
 const tbSearch = document.getElementById('tbsearch');
 const navHeader = document.getElementById('header-nav');
+const formSearch = document.getElementById('form-search');
 
 let btSearchIsActive = false;
 
@@ -11,6 +12,7 @@ const btSearchHandler = function () {
         tbSearch.style.width = "0rem";
         tbSearch.style.opacity = "0";
         btSearchIsActive = false;
+        formSearch.submit();
     } else {
         tbSearch.style.opacity = "1";
         tbSearch.style.width = "6rem";
