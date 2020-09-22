@@ -2,6 +2,7 @@
     {{- range $index, $page := .Site.RegularPages -}}
       {{- if gt $index 0 -}} , {{- end -}}
       {{- $entry := dict "uri" $page.RelPermalink "title" $page.Title -}}
+      {{- $entry = merge $entry (dict "date" ($page.Date.Format "2006-Jan-02")) -}}
       {{- $entry = merge $entry (dict "description" $page.Description) -}}
       {{- $entry = merge $entry (dict "categories" $page.Params.categories) -}}
       {{- $entry = merge $entry (dict "tags" $page.Params.tags) -}}
