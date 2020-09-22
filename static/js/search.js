@@ -4,6 +4,9 @@ const getParam = function () {
 
 const getFilter = function (term) {
     const f = (page) => {
+        if(!page.title){
+            return false;
+        }
         if (page.title.toLowerCase().indexOf(term.toLowerCase()) != -1) {
             return true;
         }
@@ -11,6 +14,9 @@ const getFilter = function (term) {
             return true;
         }
         if (page.description && page.description.toLowerCase().indexOf(term.toLowerCase()) != -1) {
+            return true;
+        }
+        if (page.content && page.content.map((word) => word.toLowerCase()).indexOf(term.toLowerCase()) != -1) {
             return true;
         }
         return false;
