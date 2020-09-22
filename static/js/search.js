@@ -1,24 +1,44 @@
 const searchDiv = document.getElementById('search-results');
 
 const getParam = function () {
-    return window.location.search.split('=')[1];
+    return window.location.search.split('=')[1].split(/\++/);
+    
 }
 
-const getFilter = function (term) {
+const getFilter = function (terms) {
     const f = (page) => {
         if (!page.title) {
             return false;
         }
-        if (page.title.toLowerCase().indexOf(term.toLowerCase()) != -1) {
+
+        function foundInString(terms, str){
+            for(let i=0; i<terms.length;i++){
+                if(str.toLowerCase().indexOf(terms[i].toLowerCase()) != -1){
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function foundInArray(terms, arr){
+            for(let i=0; i<terms.length;i++){
+                if(arr.map(item => item.toLowerCase()).indexOf(terms[i]) != -1){
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        if (foundInString(terms, page.title)) {
             return true;
         }
-        if (page.tags && page.tags.map((tag) => tag.toLowerCase()).indexOf(term.toLowerCase()) != -1) {
+        if (page.tags && foundInArray(terms, page.tags)) {
             return true;
         }
-        if (page.description && page.description.toLowerCase().indexOf(term.toLowerCase()) != -1) {
+        if (page.description && foundInString(terms, page.description)) {
             return true;
         }
-        if (page.content && page.content.map((word) => word.toLowerCase()).indexOf(term.toLowerCase()) != -1) {
+        if (page.content && foundInArray(terms, page.content)) {
             return true;
         }
         return false;
@@ -26,10 +46,10 @@ const getFilter = function (term) {
     return f;
 }
 
-const showResults = function (results, term) {
-    results = results.filter(getFilter(term));
+const showResults = function (data, term) {
+    data = data.filter(getFilter(term));
 
-    if (results.length == 0) {
+    if (data.length == 0) {
         let warning = document.createElement('h3');
         warning.innerText = 'No results Found';
         searchDiv.append(warning);
@@ -85,12 +105,12 @@ const showResults = function (results, term) {
         searchDiv.appendChild(div);
     }
 
-    let msg = `${results.length} item${(results.length>1)?'s':''} found:`;
+    let msg = `${data.length} item${(data.length>1)?'s':''} found:`;
     let h3 = document.createElement('h3');
     h3.innerText = msg;
     searchDiv.appendChild(h3);
 
-    results.forEach(page => {
+    data.forEach(page => {
         addTitle(page);
         addPostData(page);
         let hr = document.createElement('hr');
