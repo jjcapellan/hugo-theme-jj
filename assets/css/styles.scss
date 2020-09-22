@@ -1,15 +1,15 @@
-$color-background: #ffffff;
 $content-width: 760px;
 $font-size-base: 18px;
 $font-size-brand: 3rem;
 $font-size-footer: 0.8rem;
+$color-background: #ffffff;
 $color-link: #d64933;
 $color-post-title: #16596b;
 $color-thead-bottom-border: $color-link;
-$color-footer-background: #231f20;
-$color-footer-foreground: #f8e9e9;
 $color-header-background: #16596b;
 $color-header-foreground: white;
+$color-footer-background: $color-header-background;
+$color-footer-foreground: fade-out($color-header-foreground, 0.4);
 $color-brand-name: $color-header-foreground;
 $color-brand-logo-fill: $color-header-foreground;
 
