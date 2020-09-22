@@ -12,7 +12,9 @@ const btSearchHandler = function () {
         tbSearch.style.width = "0rem";
         tbSearch.style.opacity = "0";
         btSearchIsActive = false;
-        formSearch.submit();
+        if (tbSearch.value) {
+            formSearch.submit();
+        }
     } else {
         tbSearch.style.opacity = "1";
         tbSearch.style.width = "6rem";
