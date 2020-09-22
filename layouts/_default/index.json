@@ -5,6 +5,14 @@
       {{- $entry = merge $entry (dict "description" $page.Description) -}}
       {{- $entry = merge $entry (dict "categories" $page.Params.categories) -}}
       {{- $entry = merge $entry (dict "tags" $page.Params.tags) -}}
+      {{- $contentArray := findRE `<p>(.*|\n|\r)</p>` $page.Content -}}
+      {{- $content := print $contentArray -}}
+      {{- $content = replaceRE `<.*?>` " " $content -}}
+      {{- $content = replaceRE `[^\w]+` " " $content -}}
+      {{- $content = replaceRE `\b\w{1,3}\b` "" $content -}}
+      {{- $content = replaceRE `\s+` "," $content -}}
+      {{- $contentArray = split $content "," -}}
+      {{- $entry = merge $entry (dict "content" $contentArray) -}}
       {{- $entry | jsonify -}}
     {{- end -}}
   ]
