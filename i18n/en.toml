@@ -1,0 +1,24 @@
+[Tags]
+other = "Tags"
+
+[Home]
+other = "Home"
+
+[About]
+other = "About"
+
+[page_not_found]
+other = "Page not found"
+
+[results_found]
+one = "result found"
+other = "results found"
+
+[no_results_found]
+other = "No results found"
+
+[go_back]
+other = "Go back"
+
+[read_more]
+other = "Read more"

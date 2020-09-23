@@ -1,0 +1,24 @@
+[Tags]
+other = "Etiquetas"
+
+[Home]
+other = "Inicio"
+
+[About]
+other = "Sobre mi"
+
+[page_not_found]
+other = "Página no encontrada"
+
+[results_found]
+one = "resultado encontrado"
+other = "resultados encontrados"
+
+[no_results_found]
+other = "No se han encontrado resultados"
+
+[go_back]
+other = "Volver"
+
+[read_more]
+other = "Leer más"
