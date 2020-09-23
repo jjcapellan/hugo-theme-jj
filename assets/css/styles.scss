@@ -198,6 +198,28 @@ table{
     font-size: 0.8rem;
   }
 }
+.page404{
+  &-container{
+  height: 100%;
+  justify-content: center;
+  background-color: $color-header-background;
+  color: $color-header-foreground;
+  }
+  &-number{
+    font-size: 6rem;
+  }
+  &-message{
+    font-size: 2rem;
+  }
+  &-button{
+    background-color: $color-header-foreground;
+    font-size: 1.2rem;
+    color: $color-header-background;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+}
 blockquote:not(.twitter-tweet):not(.instagram-media) {
   position: relative;
   opacity: 0.5;
