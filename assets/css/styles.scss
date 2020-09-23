@@ -136,12 +136,9 @@ table{
 }
 .header-icon{
   fill: $color-header-foreground;
-  stroke: $color-header-foreground;
-  stroke-width: 1px;
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   margin: 0.4rem;
-  padding: 0.4rem;
 }
 .clickable:hover{
   cursor: pointer;
