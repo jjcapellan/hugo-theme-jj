@@ -220,6 +220,18 @@ table{
     border-radius: 5px;
   }
 }
+.social-icon {
+  height: 2.2rem;
+  width: 2.2rem;
+  margin: 0.4rem;
+  fill: $color-footer-foreground;
+}
+.flex-row {
+  display: flex;
+  max-width: $content-width;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 blockquote:not(.twitter-tweet):not(.instagram-media) {
   position: relative;
   opacity: 0.5;
