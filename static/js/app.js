@@ -9,15 +9,17 @@ let btSearchIsActive = false;
 
 const btSearchHandler = function () {
     if (btSearchIsActive) {
-        tbSearch.style.width = "0rem";
+        tbSearch.style.width = "0";
         tbSearch.style.opacity = "0";
         btSearchIsActive = false;
+        navHeader.style.opacity = "1";
         if (tbSearch.value) {
             formSearch.submit();
         }
     } else {
         tbSearch.style.opacity = "1";
-        tbSearch.style.width = "6rem";
+        tbSearch.style.width = "250px";
+        navHeader.style.opacity = "0";
         btSearchIsActive = true;
     }
 }
