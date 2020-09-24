@@ -2,17 +2,20 @@ $content-width: 760px;
 $font-size-base: 18px;
 $font-size-brand: 3rem;
 $font-size-footer: 0.8rem;
-$color-background: #ffffff;
 $color-link: #d64933;
-$color-post-title: #16596b;
-$color-thead-bottom-border: $color-link;
+$color-background: #ffffff;
 $color-header-background: #16596b;
 $color-header-foreground: white;
 $color-footer-background: $color-header-background;
 $color-footer-foreground: fade-out($color-header-foreground, 0.4);
 $color-brand-name: $color-header-foreground;
 $color-brand-logo-fill: $color-header-foreground;
+$color-post-title: $color-header-background;
+$color-thead-bottom-border: $color-link;
 
+/******************************/
+/*********** COMMON ***********/
+/******************************/
 html {
   background-color: $color-background;
   font-family: "Lato", "sans-serif";
@@ -31,6 +34,22 @@ a {
     $color-shadow: invert($color-link);
     text-shadow: 0 0 8px $color-shadow;
     color: darken($color-link, 10);
+  }
+}
+blockquote:not(.twitter-tweet):not(.instagram-media) {
+  position: relative;
+  opacity: 0.5;
+  margin: 3rem;
+  padding-left: 1em;
+  font-size: 1.5rem;
+  font-weight: 100;
+  &::before{
+    position: absolute;
+    top: -2rem;
+    left: -2rem;
+    font-family: sans-serif;
+    font-size: 6rem;
+    content: "\201C";
   }
 }
 h1,
@@ -68,6 +87,40 @@ table{
     padding: 0.1rem 0.5rem;
   }
 }
+.clickable:hover{
+  cursor: pointer;
+}
+.container-padding {
+  padding: 2rem 0.5rem;
+  flex-shrink: 0;
+}
+.content-padding {
+  padding: 4rem 0;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flex-row {
+  display: flex;
+  max-width: $content-width;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.inner-container {
+  max-width: $content-width;
+  margin: 0 auto;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+/******************************/
+/*********** HEADER ***********/
+/******************************/
 #header {
   background-color: $color-header-background;
 }
@@ -89,18 +142,6 @@ table{
   font-weight: bold;
   font-size: $font-size-brand;
   color: $color-brand-name;
-}
-#footer {
-  font-size: $font-size-footer;
-  background-color: $color-footer-background;
-  color: $color-footer-foreground;
-  a{
-    color: white;
-    text-decoration: underline;
-  }
-}
-#form-search{
-  position: relative;
 }
 #header-nav {
   display: flex;
@@ -131,8 +172,8 @@ table{
     }
   }
 }
-#content {
-  flex-grow: 1;
+#form-search{
+  position: relative;
 }
 #tbsearch{
   opacity: 0;
@@ -152,24 +193,30 @@ table{
   height: 1.5rem;
   margin: 0.4rem;
 }
-.clickable:hover{
-  cursor: pointer;
+
+/******************************/
+/********** CONTENT ***********/
+/******************************/
+#content {
+  flex-grow: 1;
 }
-.content-padding {
-  padding: 4rem 0;
+.color-title {
+  color: $color-post-title;
 }
-.container-padding {
-  padding: 2rem 0.5rem;
-  flex-shrink: 0;
+.highlight {
+  pre {
+    padding: 0.5rem;
+    overflow: auto;
+  }
+  code {
+    font-size: 0.8rem;
+  }
 }
-.inner-container {
-  max-width: $content-width;
-  margin: 0 auto;
-}
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.icon {
+  width: 0.8rem;
+  height: 0.8rem;
+  margin: 0 0.2rem;
+  opacity: 0.6;
 }
 .post{
   &-data {
@@ -185,29 +232,10 @@ table{
     }
   }
 }
-.color-title {
-  color: $color-post-title;
-}
-.icon {
-  width: 0.8rem;
-  height: 0.8rem;
-  margin: 0 0.2rem;
-  opacity: 0.6;
-}
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
-.highlight {
-  pre {
-    padding: 0.5rem;
-    overflow: auto;
-  }
-  code {
-    font-size: 0.8rem;
-  }
-}
+
+/******************************/
+/************* 404 ************/
+/******************************/
 .page404{
   &-container{
   height: 100%;
@@ -230,31 +258,27 @@ table{
     border-radius: 5px;
   }
 }
+
+/******************************/
+/*********** FOOTER ***********/
+/******************************/
+#footer {
+  font-size: $font-size-footer;
+  background-color: $color-footer-background;
+  color: $color-footer-foreground;
+  a{
+    color: white;
+    text-decoration: underline;
+  }
+}
 .social-icon {
   height: 2.2rem;
   width: 2.2rem;
   margin: 0.4rem;
   fill: $color-footer-foreground;
 }
-.flex-row {
-  display: flex;
-  max-width: $content-width;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-blockquote:not(.twitter-tweet):not(.instagram-media) {
-  position: relative;
-  opacity: 0.5;
-  margin: 3rem;
-  padding-left: 1em;
-  font-size: 1.5rem;
-  font-weight: 100;
-  &::before{
-    position: absolute;
-    top: -2rem;
-    left: -2rem;
-    font-family: sans-serif;
-    font-size: 6rem;
-    content: "\201C";
-  }
-}
+
+
+
+
+
