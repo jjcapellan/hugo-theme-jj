@@ -25,10 +25,10 @@ body {
   height: 100%;
 }
 a {
-  text-decoration: none;
-  color: $color-link;
   transition: color 0.2s;
   transition: text-shadow 0.2s;
+  text-decoration: none;
+  color: $color-link;
   &:hover {
     $color-shadow: invert($color-link);
     text-shadow: 0 0 8px $color-shadow;
@@ -73,14 +73,14 @@ h4 {
 }
 
 hr {
-  margin-bottom: 4.5rem;
   opacity: 0.4;
+  margin-bottom: 4.5rem;
 }
 table{
   border: 1px solid #16596b;
   thead {
-    color: $color-header-foreground;
     background-color: $color-header-background;
+    color: $color-header-foreground;
   }
   th,td {
     padding: 0.1rem 0.5rem;
@@ -103,13 +103,13 @@ table{
 }
 .flex-row {
   display: flex;
-  max-width: $content-width;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
+  max-width: $content-width;
 }
 .inner-container {
-  max-width: $content-width;
   margin: 0 auto;
+  max-width: $content-width;
 }
 .wrapper {
   display: flex;
@@ -126,46 +126,46 @@ table{
 #inner-header {
   display: flex;
   flex-wrap: wrap;
-  height: 100%;
   align-items: center;
   justify-content: space-between;
+  height: 100%;
 }
 #brand-logo {
-  height: $font-size-brand + 0.5rem;
-  width: $font-size-brand + 0.5rem;
   margin-right: 0.5rem;
+  width: $font-size-brand + 0.5rem;
+  height: $font-size-brand + 0.5rem;
 }
 #brand-name {
   margin-right: auto;
-  font-weight: bold;
-  font-size: $font-size-brand;
   color: $color-brand-name;
+  font-size: $font-size-brand;
+  font-weight: bold;
 }
 #header-nav {
   display: flex;
   align-items: center;
   a {
-    color: $color-header-foreground;
-    font-weight: 700;
-    margin: 1rem;
     position:relative;
     transition: color 0.2s;    
+    margin: 1rem;
+    color: $color-header-foreground;
+    font-weight: 700;
     &::before{
-      content: "";
       position: absolute;
       bottom: 0;
       left: 0;
+      transition: width 0.3s;
+      opacity: 0;
+      background-color: $color-header-foreground;
       width: 0;
       height: 2px;
-      background-color: $color-header-foreground;
-      opacity: 0;
-      transition: width 0.3s;
+      content: "";
     }
     &:hover{
       text-shadow: unset;
       &::before{
-        width: 100%;
         opacity: 1;
+        width: 100%;
       }
     }
   }
@@ -174,22 +174,22 @@ table{
   position: relative;
 }
 #tbsearch{
-  opacity: 0;
-  width: 0;
   position: absolute;
-  right: 2.3rem;
   top: 0.3rem;
-  font-size: 1rem;
-  padding: 0.2rem;
+  right: 2.3rem;
   transition: width .2s, opacity 0.2s;
   transition-timing-function: ease-out;
+  opacity: 0;
   margin-right: 0;  
+  padding: 0.2rem;
+  width: 0;
+  font-size: 1rem;
 }
 .header-icon{
-  fill: $color-header-foreground;
+  margin: 0.4rem;
   width: 1.5rem;
   height: 1.5rem;
-  margin: 0.4rem;
+  fill: $color-header-foreground;
 }
 
 /******************************/
@@ -211,10 +211,10 @@ table{
   }
 }
 .icon {
+  opacity: 0.6;
+  margin: 0 0.2rem;
   width: 0.8rem;
   height: 0.8rem;
-  margin: 0 0.2rem;
-  opacity: 0.6;
 }
 .post{
   &-data {
@@ -236,9 +236,9 @@ table{
 /******************************/
 .page404{
   &-container{
-  height: 100%;
   justify-content: center;
   background-color: $color-header-background;
+  height: 100%;
   color: $color-header-foreground;
   }
   &-number{
@@ -248,12 +248,12 @@ table{
     font-size: 2rem;
   }
   &-button{
-    background-color: $color-header-foreground;
-    font-size: 1.2rem;
-    color: $color-header-background;
     border: none;
-    padding: 0.5rem;
     border-radius: 5px;
+    background-color: $color-header-foreground;
+    padding: 0.5rem;
+    color: $color-header-background;
+    font-size: 1.2rem;
   }
 }
 
@@ -261,18 +261,18 @@ table{
 /*********** FOOTER ***********/
 /******************************/
 #footer {
-  font-size: $font-size-footer;
   background-color: $color-footer-background;
   color: $color-footer-foreground;
+  font-size: $font-size-footer;
   a{
     color: white;
     text-decoration: underline;
   }
 }
 .social-icon {
-  height: 2.2rem;
-  width: 2.2rem;
   margin: 0.4rem;
+  width: 2.2rem;
+  height: 2.2rem;
   fill: $color-footer-foreground;
 }
 
