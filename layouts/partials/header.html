@@ -1,7 +1,7 @@
 <header id="header" class="container-padding">
     <div id="inner-header" class="inner-container">
         {{ if .Site.Params.brand.logo}}
-        <svg id="brand-logo"><use href="{{ .Site.Params.brand.logo }}"></use></svg>
+        <img id="brand-logo" src="{{ .Site.Params.brand.logo }}" alt="logo">
         {{ end }}
         {{ if .Site.Params.brand.name }}
         <span id="brand-name">{{ .Site.Params.brand.name }}</span>

@@ -9,7 +9,6 @@ $color-header-foreground: white;
 $color-footer-background: $color-header-background;
 $color-footer-foreground: fade-out($color-header-foreground, 0.4);
 $color-brand-name: $color-header-foreground;
-$color-brand-logo-fill: $color-header-foreground;
 $color-post-title: $color-header-background;
 $color-thead-bottom-border: $color-link;
 
@@ -135,7 +134,6 @@ table{
   height: $font-size-brand + 0.5rem;
   width: $font-size-brand + 0.5rem;
   margin-right: 0.5rem;
-  fill: $color-brand-logo-fill;
 }
 #brand-name {
   margin-right: auto;
