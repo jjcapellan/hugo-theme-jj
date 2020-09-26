@@ -104,8 +104,16 @@ table{
 .flex-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   max-width: $content-width;
+  &-center{
+    justify-content: center;
+  }
+  &-spacebtw{
+    justify-content: space-between;
+  }
+}
+.font-bold{
+  font-weight: bold;
 }
 .inner-container {
   margin: 0 auto;
