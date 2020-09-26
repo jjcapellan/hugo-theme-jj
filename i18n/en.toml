@@ -22,3 +22,9 @@ other = "Go back"
 
 [read_more]
 other = "Read more"
+
+[NEWER]
+other = "NEWER"
+
+[OLDER]
+other = "OLDER"

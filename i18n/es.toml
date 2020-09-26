@@ -22,3 +22,9 @@ other = "Volver"
 
 [read_more]
 other = "Leer más"
+
+[NEWER]
+other = "NUEVOS"
+
+[OLDER]
+other = "ANTERIORES"

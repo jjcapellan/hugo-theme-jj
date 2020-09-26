@@ -1,10 +1,10 @@
 <div class="flex-row flex-row-spacebtw font-bold">
     {{ if .HasPrev }}
-    <a href="{{ .Prev.URL }}"><< NEWER</a>
+    <a href="{{ .Prev.URL }}"><<{{ i18n "NEWER" }}</a>
     {{ else }}
     <a></a>
     {{ end }}
     {{ if .HasNext }}
-    <a href="{{ .Next.URL }}">OLDER >></a>
+    <a href="{{ .Next.URL }}">{{ i18n "OLDER" }}>></a>
     {{ end }}
 </div>
