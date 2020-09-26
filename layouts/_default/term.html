@@ -2,7 +2,7 @@
 <div class="inner-container content-padding">
         <h1 class="color-title">#{{ .Title }}</h1><hr>
         
-        {{ range .Pages }}
+        {{ range .Paginator.Pages }}
             <h2>
                 <a class="color-title" href="{{ .Permalink }}">{{ .Title}}</a>                
         </h2>
@@ -21,6 +21,7 @@
         </div>
         <hr>
         {{ end }}
+        {{ partial "paginator.html" .Paginator }}
         
 </div>
 {{ end }}
