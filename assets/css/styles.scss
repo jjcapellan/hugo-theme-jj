@@ -88,6 +88,7 @@ table{
 }
 .clickable:hover{
   cursor: pointer;
+  opacity: 1;
 }
 .container-padding {
   padding: 2rem 0.5rem;
@@ -154,27 +155,14 @@ table{
   align-items: center;
   a {
     position:relative;
-    transition: color 0.2s;    
+    transition: opacity 0.2s;    
     margin: 1rem;
     color: $color-header-foreground;
+    opacity: 0.8;
     font-weight: 700;
-    &::before{
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      transition: width 0.3s;
-      opacity: 0;
-      background-color: $color-header-foreground;
-      width: 0;
-      height: 2px;
-      content: "";
-    }
     &:hover{
       text-shadow: unset;
-      &::before{
-        opacity: 1;
-        width: 100%;
-      }
+      opacity: 1;
     }
   }
 }
@@ -198,6 +186,7 @@ table{
   width: 1.5rem;
   height: 1.5rem;
   fill: $color-header-foreground;
+  opacity: 0.8;
 }
 
 /******************************/
