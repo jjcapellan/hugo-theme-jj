@@ -6,16 +6,18 @@
         {{ if .Site.Params.brand.name }}
         <span id="brand-name">{{ .Site.Params.brand.name }}</span>
         {{ end }}
-        <nav id="header-nav">              
-            {{ range .Site.Menus.main }}
-            <a href="{{ .URL }}">{{ i18n .Name }}</a>
-            {{ end }}            
-        </nav>
-        <form id="form-search" action="/search/" method="GET">
-            <input type="text" name="term" id="tbsearch">
-            <svg id="btsearch" class="header-icon clickable">
-                <use href="/imgs/jj-icons.svg#search"></use>
-            </svg>
-        </form>
+        <div class="flex-row flex-row-centerv">
+            <nav id="header-nav">
+                {{ range .Site.Menus.main }}
+                <a href="{{ .URL }}">{{ i18n .Name }}</a>
+                {{ end }}
+            </nav>
+            <form id="form-search" action="/search/" method="GET">
+                <input type="text" name="term" id="tbsearch">
+                <svg id="btsearch" class="header-icon clickable">
+                    <use href="/imgs/jj-icons.svg#search"></use>
+                </svg>
+            </form>
+        </div>
     </div>
 </header>

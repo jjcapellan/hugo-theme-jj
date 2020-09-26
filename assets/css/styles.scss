@@ -3,7 +3,7 @@ $font-size-base: 19px;
 $font-size-brand: 3rem;
 $font-size-footer: 0.8rem;
 $color-link: #d64933;
-$color-background: #ffffff;
+$color-background: white;
 $color-header-background: #16596b;
 $color-header-foreground: white;
 $color-footer-background: $color-header-background;
@@ -109,9 +109,12 @@ table{
   &-center{
     justify-content: center;
   }
+  &-centerv{
+    align-items: center;
+  }
   &-spacebtw{
     justify-content: space-between;
-  }
+  }  
 }
 .font-bold{
   font-weight: bold;
@@ -272,6 +275,25 @@ table{
   height: 2.2rem;
   fill: $color-footer-foreground;
 }
+
+@media only screen and (max-width: 760px) {
+  .container-padding{
+    padding: 1rem;
+  }
+  #inner-header{
+    flex-direction: column;
+    justify-content: unset;
+  }
+  #brand-logo{
+    width: ($font-size-brand + 0.5rem)*0.7;
+    height: ($font-size-brand + 0.5rem)*0.7;
+  }
+  #brand-name{
+    margin-right: unset;
+    font-size: $font-size-brand * 0.7;
+  }
+}
+
 
 
 
