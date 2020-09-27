@@ -218,7 +218,10 @@ table{
 }
 .post{
   &-data {
-    line-height: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    line-height: 1rem;
     font-size: 0.7rem;
     font-weight: 100;
   }
