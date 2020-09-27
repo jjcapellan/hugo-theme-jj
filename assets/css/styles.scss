@@ -186,8 +186,8 @@ table{
 }
 .header-icon{
   margin: 0.4rem;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.2rem;
+  height: 1.2rem;
   fill: $color-header-foreground;
   opacity: 0.8;
 }
@@ -291,6 +291,12 @@ table{
   #brand-name{
     margin-right: unset;
     font-size: $font-size-brand * 0.7;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  #header-nav{
+    font-size: 0.8rem;
   }
 }
 
