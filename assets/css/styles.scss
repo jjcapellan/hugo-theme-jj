@@ -300,6 +300,12 @@ table{
 @media only screen and (max-width: 430px) {
   #header-nav{
     font-size: 0.8rem;
+    a{
+      margin: 0.3rem 0.5rem;
+    }
+  }
+  #form-search{
+    margin-left: auto;
   }
 }
 
