@@ -2,15 +2,16 @@ $content-width: 760px;
 $font-size-base: 19px;
 $font-size-brand: 2rem;
 $font-size-footer: 0.8rem;
-$color-link: #d64933;
-$color-background: white;
-$color-header-background: #16596b;
-$color-header-foreground: white;
+$color-background: #f2f0e1;
+$color-post-title: #b13e41;
+$color-header-background: #3d3d3b;
+$color-header-foreground: $color-background;
 $color-footer-background: $color-header-background;
 $color-footer-foreground: fade-out($color-header-foreground, 0.4);
 $color-brand-name: $color-header-foreground;
-$color-post-title: $color-header-background;
+$color-link: $color-post-title;
 $color-thead-bottom-border: $color-link;
+
 
 /******************************/
 /*********** COMMON ***********/
@@ -23,6 +24,7 @@ html {
 html,
 body {
   height: 100%;
+  color: $color-header-background;
 }
 a {
   transition: color 0.2s;
@@ -30,9 +32,8 @@ a {
   text-decoration: none;
   color: $color-link;
   &:hover {
-    $color-shadow: invert($color-link);
-    text-shadow: 0 0 8px $color-shadow;
-    color: darken($color-link, 10);
+    text-shadow: 0 0 8px $color-post-title;
+    color: darken($color-header-background, 10);
   }
 }
 blockquote:not(.twitter-tweet):not(.instagram-media) {
