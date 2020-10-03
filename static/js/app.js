@@ -9,7 +9,7 @@ let btSearchIsActive = false;
 let tbIsLostFocus = false;
 
 const btSearchHandler = function (event) {
-    console.log(event);    
+    console.log(event);
     if (btSearchIsActive) {
         closeSearch(event);
         if (tbSearch.value) {
@@ -24,15 +24,15 @@ const btSearchHandler = function (event) {
     }
 }
 
-const closeSearch = function(event){
-    if(event.target == tbSearch && btSearch == formSearch.querySelector(':hover')){
+const closeSearch = function (event) {
+    if (event.target == tbSearch && btSearch == formSearch.querySelector(':hover')) {
         return;
     }
     tbSearch.style.width = "0";
     tbSearch.style.opacity = "0";
     navHeader.style.opacity = "1";
     btSearchIsActive = false;
-    if(event.target == tbSearch){
+    if (event.target == tbSearch) {
         tbSearch.value = "";
     }
 }
@@ -57,7 +57,7 @@ tbSearch.addEventListener('focusout', closeSearch);
         let menuArray = [];
         let previusWidth = 0;
         for (let i = 0; i < allLinks.length; i++) {
-            if(allLinks[i].getAttribute('id') == 'more'){
+            if (allLinks[i].getAttribute('id') == 'more') {
                 continue;
             }
             if (i > 0) {
@@ -92,18 +92,18 @@ tbSearch.addEventListener('focusout', closeSearch);
                 visibleLinks++;
             }
         }
-        if(visibleLinks == totalLinks && more.style.display != "none"){
+        if (visibleLinks == totalLinks && more.style.display != "none") {
             more.style.display = "none";
-        } else if(visibleLinks<totalLinks && more.style.display == "none"){
+        } else if (visibleLinks < totalLinks && more.style.display == "none") {
             more.style.display = "unset";
         }
     }
-    
+
     resizeHandler();
     window.addEventListener('resize', resizeHandler);
     more.addEventListener('click', (event) => {
-            event.preventDefault();
-            submenu.classList.toggle('submenu-open');
-            submenu.classList.toggle('submenu-closed');
+        event.preventDefault();
+        submenu.classList.toggle('submenu-open');
+        submenu.classList.toggle('submenu-closed');
     })
 })()
