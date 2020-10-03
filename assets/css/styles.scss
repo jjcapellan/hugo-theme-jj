@@ -1,6 +1,6 @@
 $content-width: 760px;
 $font-size-base: 19px;
-$font-size-brand: 3rem;
+$font-size-brand: 2rem;
 $font-size-footer: 0.8rem;
 $color-link: #d64933;
 $color-background: white;
@@ -91,7 +91,7 @@ table{
   opacity: 1;
 }
 .container-padding {
-  padding: 2rem 1rem;
+  padding: 0.5rem;
   flex-shrink: 0;
 }
 .content-padding {
@@ -148,7 +148,6 @@ table{
   height: $font-size-brand + 0.5rem;
 }
 #brand-name {
-  margin-right: auto;
   color: $color-brand-name;
   font-size: $font-size-brand;
   font-weight: bold;
@@ -156,10 +155,12 @@ table{
 #header-nav {
   display: flex;
   align-items: center;
+  flex-grow: 1;
+  justify-content: flex-end;
   a {
     position:relative;
     transition: opacity 0.2s;    
-    margin: 1rem;
+    padding: 1rem;
     color: $color-header-foreground;
     opacity: 0.8;
     font-weight: 700;
