@@ -42,7 +42,7 @@ blockquote:not(.twitter-tweet):not(.instagram-media) {
   padding-left: 1em;
   font-size: 1.5rem;
   font-weight: 100;
-  &::before{
+  &::before {
     position: absolute;
     top: -2rem;
     left: -2rem;
@@ -76,17 +76,18 @@ hr {
   opacity: 0.4;
   margin-bottom: 4.5rem;
 }
-table{
+table {
   border: 1px solid #16596b;
   thead {
     background-color: $color-header-background;
     color: $color-header-foreground;
   }
-  th,td {
+  th,
+  td {
     padding: 0.1rem 0.5rem;
   }
 }
-.clickable:hover{
+.clickable:hover {
   cursor: pointer;
   opacity: 1;
 }
@@ -106,17 +107,17 @@ table{
   display: flex;
   flex-wrap: wrap;
   max-width: $content-width;
-  &-center{
+  &-center {
     justify-content: center;
   }
-  &-centerv{
+  &-centerv {
     align-items: center;
   }
-  &-spacebtw{
+  &-spacebtw {
     justify-content: space-between;
-  }  
+  }
 }
-.font-bold{
+.font-bold {
   font-weight: bold;
 }
 .inner-container {
@@ -137,7 +138,7 @@ table{
 }
 #inner-header {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   height: 100%;
@@ -148,49 +149,76 @@ table{
   height: $font-size-brand + 0.5rem;
 }
 #brand-name {
+  flex-shrink: 0;
+  padding-right: 1rem;
   color: $color-brand-name;
   font-size: $font-size-brand;
   font-weight: bold;
 }
 #header-nav {
   display: flex;
-  align-items: center;
+  position: relative;
   flex-grow: 1;
+  align-items: center;
   justify-content: flex-end;
   a {
-    position:relative;
-    transition: opacity 0.2s;    
-    padding: 1rem;
+    position: relative;
+    flex-shrink: 0;
+    transition: opacity 0.2s;
+    padding: 0.5rem;
     color: $color-header-foreground;
     opacity: 0.8;
+    font-size: 0.8rem;
     font-weight: 700;
-    &:hover{
+    &:hover {
       text-shadow: unset;
       opacity: 1;
     }
   }
 }
-#form-search{
+#form-search {
   position: relative;
 }
-#tbsearch{
+#tbsearch {
   position: absolute;
   top: 0.3rem;
   right: 2.3rem;
-  transition: width .2s, opacity 0.2s;
+  transition: width 0.2s, opacity 0.2s;
   transition-timing-function: ease-out;
   opacity: 0;
-  margin-right: 0;  
+  margin-right: 0;
   padding: 0.2rem;
   width: 0;
   font-size: 1rem;
 }
-.header-icon{
+#more {
+  &::after {
+    opacity: 0.8;
+    border-top: 4px solid $color-header-foreground;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    content: "";
+  }
+}
+.header-icon {
   margin: 0.4rem;
   width: 1.2rem;
   height: 1.2rem;
   fill: $color-header-foreground;
   opacity: 0.8;
+}
+.submenu {
+  &-closed {
+    display: none;
+  }
+  &-open {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    flex-direction: column;
+    background-color: $color-header-background;
+  }
 }
 
 /******************************/
@@ -217,7 +245,7 @@ table{
   width: 0.8rem;
   height: 0.8rem;
 }
-.post{
+.post {
   &-data {
     display: flex;
     flex-wrap: wrap;
@@ -238,20 +266,20 @@ table{
 /******************************/
 /************* 404 ************/
 /******************************/
-.page404{
-  &-container{
-  justify-content: center;
-  background-color: $color-header-background;
-  height: 100%;
-  color: $color-header-foreground;
+.page404 {
+  &-container {
+    justify-content: center;
+    background-color: $color-header-background;
+    height: 100%;
+    color: $color-header-foreground;
   }
-  &-number{
+  &-number {
     font-size: 6rem;
   }
-  &-message{
+  &-message {
     font-size: 2rem;
   }
-  &-button{
+  &-button {
     border: none;
     border-radius: 5px;
     background-color: $color-header-foreground;
@@ -268,7 +296,7 @@ table{
   background-color: $color-footer-background;
   color: $color-footer-foreground;
   font-size: $font-size-footer;
-  a{
+  a {
     color: white;
     text-decoration: underline;
   }
@@ -280,7 +308,7 @@ table{
   fill: $color-footer-foreground;
 }
 
-@media only screen and (max-width: 760px) {
+/*@media only screen and (max-width: 450px) {
   .container-padding{
     padding: 1rem;
   }
@@ -308,10 +336,4 @@ table{
   #form-search{
     margin-left: auto;
   }
-}
-
-
-
-
-
-
+}*/
