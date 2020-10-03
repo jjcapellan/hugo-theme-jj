@@ -53,7 +53,8 @@ tbSearch.addEventListener('focusout', closeSearch);
     function generateMenuArray() {
         let allLinks = Array.from(nav.getElementsByTagName('a'));
         const moreWidth = more.clientWidth;
-        let extraSpace = moreWidth;
+        const margin = 50;
+        let extraSpace = moreWidth + margin;
         let menuArray = [];
         let previusWidth = 0;
         for (let i = 0; i < allLinks.length; i++) {
