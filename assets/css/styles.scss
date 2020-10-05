@@ -142,10 +142,11 @@ table {
 }
 #inner-header {
   display: flex;
-  position: relative;
+  position: relative;  
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 100%;
 }
 #brand-logo {
