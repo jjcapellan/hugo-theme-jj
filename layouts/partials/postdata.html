@@ -1,0 +1,9 @@
+<div class="post-data">
+    <span>{{ .Date.Format "2006-Jan-02"}}</span>
+    <svg class="icon">
+        <use href="/imgs/jj-icons.svg#tag"></use>
+    </svg>
+    {{ range .Params.tags}}
+    <a href="/tags/{{ . | urlize }}" class="post-tag">#{{ . }} </a>
+    {{ end }}
+</div>

@@ -3,6 +3,7 @@
   <article>
     {{ if .Params.cover }} <img class="cover-image" src="{{ .Params.cover }}" alt="{{ .Title }}" loading="lazy">{{ end }}
     <h1 class="color-title">{{ .Title}}</h1>
+    {{ partial "postdata.html" . }}
     {{ .Content }}
   </article>
 </section>
