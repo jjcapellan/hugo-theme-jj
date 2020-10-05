@@ -142,6 +142,7 @@ table {
 }
 #inner-header {
   display: flex;
+  position: relative;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -180,19 +181,15 @@ table {
     }
   }
 }
-#form-search {
-  position: relative;
-}
 #tbsearch {
   position: absolute;
-  top: 0.3rem;
-  right: 2.3rem;
-  transition: width 0.2s, opacity 0.2s;
+  top: 0;
+  right: 5%;
+  transition: top 0.2s;
   transition-timing-function: ease-out;
-  opacity: 0;
-  margin-right: 0;
+  z-index: -1;
   padding: 0.2rem;
-  width: 0;
+  width: 90%;
   font-size: 1rem;
 }
 #more {

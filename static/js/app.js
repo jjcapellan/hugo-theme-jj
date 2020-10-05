@@ -16,9 +16,7 @@ const btSearchHandler = function (event) {
             formSearch.submit();
         }
     } else {
-        tbSearch.style.opacity = "1";
-        tbSearch.style.width = "250px";
-        navHeader.style.opacity = "0";
+        tbSearch.style.top = "calc(100% + 0.5rem)";
         btSearchIsActive = true;
         tbSearch.focus();
     }
@@ -28,9 +26,7 @@ const closeSearch = function (event) {
     if (event.target == tbSearch && btSearch == formSearch.querySelector(':hover')) {
         return;
     }
-    tbSearch.style.width = "0";
-    tbSearch.style.opacity = "0";
-    navHeader.style.opacity = "1";
+    tbSearch.style.top = "0";
     btSearchIsActive = false;
     if (event.target == tbSearch) {
         tbSearch.value = "";
