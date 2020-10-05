@@ -1,9 +1,13 @@
 {{ define "main" }}
 <div class="inner-container content-padding">
         {{ range .Paginator.Pages }}
-        {{ if .Params.summaryCover }} <img class="cover-image" src="{{ .Params.summaryCover }}" alt="{{ .Title }}" loading="lazy"> {{ end }}
+        {{ if .Params.summaryCover }}
+        <a href="{{ .Permalink }}">
+                <img class="cover-image" src="{{ .Params.summaryCover }}" alt="{{ .Title }}" loading="lazy">
+        </a>
+        {{ end }}
         <h2>
-                <a class="color-title" href="{{ .Permalink }}">{{ .Title}}</a>                
+                <a class="color-title" href="{{ .Permalink }}">{{ .Title}}</a>
         </h2>
         <div class="post-data">
                 <span>{{ .Date.Format "2006-Jan-02"}}</span>
@@ -11,15 +15,15 @@
                         <use href="/imgs/jj-icons.svg#tag"></use>
                 </svg>
                 {{ range .Params.tags}}
-                <a href="/tags/{{ . | urlize }}" class="post-tag">#{{ . }}  </a>
+                <a href="/tags/{{ . | urlize }}" class="post-tag">#{{ . }} </a>
                 {{ end }}
         </div>
         <p>{{ .Summary}}<p>
-        <div style="text-align: right;">
-                <a href="{{ .Permalink }}">{{ i18n "read_more" }}</a>
-        </div>
-        <hr>
-        {{ end }}
-        {{ partial "paginator.html" .Paginator }}
+                        <div style="text-align: right;">
+                                <a href="{{ .Permalink }}">{{ i18n "read_more" }}</a>
+                        </div>
+                        <hr>
+                        {{ end }}
+                        {{ partial "paginator.html" .Paginator }}
 </div>
 {{ end }}
