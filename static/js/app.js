@@ -9,14 +9,14 @@ let btSearchIsActive = false;
 let tbIsLostFocus = false;
 
 const btSearchHandler = function (event) {
-    console.log(event);
     if (btSearchIsActive) {
         closeSearch(event);
         if (tbSearch.value) {
             formSearch.submit();
         }
     } else {
-        tbSearch.style.top = "calc(100% + 0.5rem)";
+        tbSearch.style.opacity = '1';
+        tbSearch.style.zIndex='10';
         btSearchIsActive = true;
         tbSearch.focus();
     }
@@ -26,16 +26,17 @@ const closeSearch = function (event) {
     if (event.target == tbSearch && btSearch == formSearch.querySelector(':hover')) {
         return;
     }
-    tbSearch.style.top = "0";
+    tbSearch.style.opacity = '0';
+    tbSearch.style.zIndex='-10';
     btSearchIsActive = false;
     if (event.target == tbSearch) {
-        tbSearch.value = "";
+        tbSearch.value = '';
     }
 }
 
 btSearch.addEventListener('click', btSearchHandler);
 
-tbSearch.addEventListener('focusout', closeSearch);
+tbSearch.addEventListener('blur', closeSearch);
 
 
 

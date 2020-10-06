@@ -184,11 +184,12 @@ table {
 }
 #tbsearch {
   position: absolute;
-  top: 0;
+  top: calc(100% + 0.5rem);
   right: 5%;
-  transition: top 0.2s;
+  transition: opacity 0.2s;
   transition-timing-function: ease-out;
-  z-index: -1;
+  opacity: 0;
+  z-index: -10;
   padding: 0.2rem;
   width: 90%;
   font-size: 1rem;
