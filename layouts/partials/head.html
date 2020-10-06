@@ -6,10 +6,12 @@
         content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ else }}{{ .Site.Params.description }}{{end }}{{ end }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="canonical" href="{{ .Permalink }}" />
-    <link rel="stylesheet" href="/css/sanitize.css">
+    {{ $css := resources.Get "css/sanitize.css" }}
+    {{ $style := $css | resources.Minify }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
-    {{ $css := resources.Get "css/styles.scss" }}
-    {{ $style := $css | resources.ToCSS | resources.Minify }}
+    {{ $css = resources.Get "css/styles.scss" }}
+    {{ $style = $css | resources.ToCSS | resources.Minify }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
     {{ if .Params.math }}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
