@@ -2,9 +2,12 @@
 <section class="inner-container content-padding">    
   <article>
     {{ if .Params.cover }} <img class="cover-image" src="{{ .Params.cover }}" alt="{{ .Title }}" loading="lazy">{{ end }}
-    <h1 class="color-title">{{ .Title}}</h1>
+    <h1 class="color-title">{{ .Title}}</h1>    
     {{ partial "postdata.html" . }}
-    {{ .Content }}
+    {{ .Content }}    
+    {{ if .Site.Params.share }}
+    {{ partial "share.html" . }}
+    {{ end }}
   </article>
 </section>
 {{ end }}
