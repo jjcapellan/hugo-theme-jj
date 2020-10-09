@@ -8,6 +8,7 @@
     {{ if .Site.Params.share }}
     {{ partial "share.html" . }}
     {{ end }}
+    {{ partial "disqus.html" . }}
   </article>
 </section>
 {{ end }}
