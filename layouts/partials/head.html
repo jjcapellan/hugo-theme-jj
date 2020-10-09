@@ -5,6 +5,9 @@
     <meta name="description"
         content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ else }}{{ .Site.Params.description }}{{end }}{{ end }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ if .Site.GoogleAnalytics }}
+    {{ template "_internal/google_analytics_async.html" . }}
+    {{ end }}
     <link rel="canonical" href="{{ .Permalink }}" />
     {{ $css := resources.Get "css/sanitize.css" }}
     {{ $style := $css | resources.Minify }}
