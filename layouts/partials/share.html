@@ -7,14 +7,14 @@
         href="https://twitter.com/share?ref_src=twsrc%5Etfw&text={{ $page.Title }}&hashtags={{ if $page.Params.tags }}{{ delimit $page.Params.tags "," }}{{ end }}"
         target="_blank">
         <svg class="share-icon">
-            <use href="/imgs/jj-icons.svg#{{ . }}-icon"></use>
+            <use href="/imgs/jj-icons.svg#{{ . }}"></use>
         </svg>
     </a>
     {{ end }}
     {{ if eq . "facebook" }}
     <a rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u={{ $page.Permalink }}" target="_blank">
         <svg class="share-icon">
-            <use href="/imgs/jj-icons.svg#{{ . }}-icon"></use>
+            <use href="/imgs/jj-icons.svg#{{ . }}"></use>
         </svg>
     </a>
     {{ end }}
@@ -23,7 +23,7 @@
         href="http://www.linkedin.com/shareArticle?url={{ $page.Permalink }}&title={{ $page.Title }}&summary={{ $page.Summary }}&source={{ $page.Site.BaseURL }}"
         target="_blank">
         <svg class="share-icon">
-            <use href="/imgs/jj-icons.svg#{{ . }}-icon"></use>
+            <use href="/imgs/jj-icons.svg#{{ . }}"></use>
         </svg>
     </a>
     {{ end }}
@@ -31,7 +31,7 @@
     <a rel="noopener" href="https://www.reddit.com/submit?url={{ $page.Permalink }}&title={{ $page.Title }}"
         target="_blank">
         <svg class="share-icon">
-            <use href="/imgs/jj-icons.svg#{{ . }}-icon"></use>
+            <use href="/imgs/jj-icons.svg#{{ . }}"></use>
         </svg>
     </a>
     {{ end }}
