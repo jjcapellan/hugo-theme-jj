@@ -342,33 +342,3 @@ table {
   height: 2.2rem;
   fill: $color-footer-foreground;
 }
-
-/*@media only screen and (max-width: 450px) {
-  .container-padding{
-    padding: 1rem;
-  }
-  #inner-header{
-    flex-direction: column;
-    justify-content: unset;
-  }
-  #brand-logo{
-    width: ($font-size-brand + 0.5rem)*0.7;
-    height: ($font-size-brand + 0.5rem)*0.7;
-  }
-  #brand-name{
-    margin-right: unset;
-    font-size: $font-size-brand * 0.7;
-  }
-}
-
-@media only screen and (max-width: 430px) {
-  #header-nav{
-    font-size: 0.8rem;
-    a{
-      margin: 0.3rem 0.5rem;
-    }
-  }
-  #form-search{
-    margin-left: auto;
-  }
-}*/
