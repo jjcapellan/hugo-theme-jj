@@ -11,7 +11,7 @@
         {{ end }}
     </div>
     <br>
-    <span>{{ .Site.Params.copyright }}.</span>
+    <span>{{ .Site.Copyright }}.</span>
     <span>Powered by <a class="" href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/jjcapellan/hugo-theme-jj/">JJ</a></span>
     {{ $js := resources.Get "js/app.js" }}
     {{ $app := $js | resources.Minify }}
