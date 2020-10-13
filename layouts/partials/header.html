@@ -8,7 +8,7 @@
         {{ end }}
         <nav id="header-nav">
             {{ range .Site.Menus.main }}
-            <a href="{{ .URL }}">{{ i18n .Name }}</a>            
+            <a href="{{ .URL }}">{{ i18n .Name | default .Name}}</a>            
             {{ end }}
             <a id="more" class="clickable">More</a>
             <div id="submenu" class="submenu-closed"></div>
