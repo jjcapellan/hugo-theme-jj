@@ -1,5 +1,7 @@
 {{ define "main"}}
+{{ if .Site.Params.search.active }}
 <div id="search-results" class="inner-container content-padding">
 </div>
 {{ partial "psearch.html" }}
+{{ end }}
 {{ end }}

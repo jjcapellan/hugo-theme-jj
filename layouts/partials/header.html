@@ -13,11 +13,13 @@
             <a id="more" class="clickable">More</a>
             <div id="submenu" class="submenu-closed"></div>
         </nav>
+        {{ if .Site.Params.search.active }}
         <form id="form-search" action="/search/" method="GET">            
             <svg id="btsearch" class="header-icon clickable">
                 <use href="/imgs/jj-icons.svg#search"></use>
             </svg>
         </form>
         <input form="form-search" type="text" name="term" id="tbsearch" placeholder="Search...">
+        {{ end }}
     </div>
 </header>
