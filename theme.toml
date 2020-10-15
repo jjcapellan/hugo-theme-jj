@@ -3,12 +3,12 @@
 
 name = "JJ"
 license = "MIT"
-licenselink = ""
-description = ""
-homepage = ""
-tags = []
-features = []
-min_version = "0.41.0"
+licenselink = "https://raw.githubusercontent.com/jjcapellan/master/LICENSE"
+description = "Simple and light theme for Hugo"
+homepage = "https://github.com/jjcapellan/"
+tags = ["clean", "simple", "responsive", "personal", "no frameworks"]
+features = ["multilingual interface","share buttons", "google-analytics","disqus","search"]
+min_version = "0.75.0"
 
 [author]
   name = "Juan Jose Capellan"
