@@ -1,0 +1,121 @@
+baseURL = "http://mysite.com/"             # Your site root domain.
+title = "Site title"                       # Site title. Used in head meta tags.
+copyright = "Copyright © 2020 Your Name"   # Copyright notice.
+
+theme = "jj"                               # Current theme
+
+languageCode = "en-us"
+DefaultContentLanguage = "en"              # User interface language code (currently available translations: en, es)
+
+googleAnalytics= ""                        # Your google analytics id (ex: UA-12345-Y). Empty value disables it.
+disqusShortname = ""                       # Empty value disables it.
+
+paginate = 10                              # Max number of elements showed in lists.
+summaryLength = 70                         # Number of characters taken from the post.
+
+
+# Customizable menu. You can add or remove elements.
+[Menu]
+    [[Menu.main]]
+        identifier = "home"
+        name = "Home"
+        url = "/"
+        weight = 1
+    [[Menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about/about"
+        weight = 3
+    [[Menu.main]]
+        identifier = "tags"
+        name = "Tags"
+        url = "/tags/"
+        weight = 2
+
+
+
+[params]
+
+  author = ""                                            # Author name.
+  
+  share = ["twitter", "facebook", "linkedin", "reddit"]  # Array of share links. 
+                                                         # Possible values: "twitter", "facebook", "linkedin", "reddit".
+
+  [params.search]
+    active = true                                        # Activate search feature?
+
+  [params.brand]
+    name = "JJ Theme"                                    # Name of your brand or site title. Empty value disables it.
+    logo = "/imgs/logo.svg"                              # Path to your logo. Empty value disables it.
+
+
+  # Follow icons on footer (more in future versions). Empty value in follow_link disables it.
+  [[params.social]]
+    name = "twitter"
+    follow_link="#"
+  [[params.social]]
+    name = "facebook"
+    follow_link="#"
+  [[params.social]]
+    name = "github"
+    follow_link="#"
+  [[params.social]]
+    name = "instagram"
+    follow_link="#"
+  [[params.social]]
+    name = "linkedin"
+    follow_link=""
+
+
+# Privacy settings are set looking at the european gdpr law.
+# Disqus ask for consent in first connect.
+[privacy]
+  [privacy.disqus]
+    disable = false
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    disable = false
+    respectDoNotTrack = true
+    useSessionStorage = true
+  [privacy.instagram]
+    disable = false
+    simple = true
+  [privacy.twitter]
+    disable = false
+    enableDNT = true
+    simple = true
+  [privacy.vimeo]
+    disable = false
+    enableDNT = true
+    simple = true
+  [privacy.youtube]
+    disable = false
+    privacyEnhanced = true
+
+
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
+
+
+# Don't change this.
+[outputFormats]
+  [outputFormats.search]
+    mediaType = "application/json"
+    baseName = "search"
+    isPlainText = true
+    notAlternative = true
+
+[outputs]
+  home=["HTML","search"]
+
+
