@@ -24,7 +24,8 @@
     * [cover](#cover)
     * [summaryCover](#summaryCover)
     * [math](#math)
-* [Shortcodes]
+* [Shortcodes](#Shortcodes)
+    * [fig (figure)](#fig-(figure))
 
 ## Installation
 1. Before start installation, ensure you have installed an [extended version of Hugo](https://github.com/gohugoio/hugo/releases). You can find help on this topic from [Hugo docs](https://gohugo.io/getting-started/installing/).
