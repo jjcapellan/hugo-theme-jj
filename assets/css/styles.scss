@@ -280,6 +280,8 @@ table {
     border-radius: 6px;
     background-color: $color-dark;
     padding: 0.5rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     color: $color-light;
   }
@@ -334,6 +336,8 @@ table {
     margin: 0 auto;
     background-color: $color-dark;
     padding: 0.2rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     max-width: 100%;
   }
