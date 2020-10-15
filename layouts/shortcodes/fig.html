@@ -1,0 +1,39 @@
+{{ $src := "" }}
+{{ $desc := "" }}
+{{ $attr := "" }}
+{{ $lnk := "" }}
+{{ $preAttr := "" }}
+
+{{ if .IsNamedParams }}
+    {{ $src = .Get "src" }}
+    {{ $desc = .Get "caption" }}
+    {{ $attr = .Get "attr" }}
+    {{ $lnk = .Get "attrlink"}}
+{{ else }}
+    {{ $src = .Get 0 }}
+    {{ $desc = .Get 1 }}
+    {{ $attr = .Get 2 }}
+    {{ $lnk = .Get 3 }}
+{{ end }}
+
+{{ if $attr }}
+    {{ if $lnk }}
+        {{ $attr = printf "%s%s%s%s%s" " by <a target=\"_blank\" rel=\"noopener noreferrer\" href=" $lnk ">" $attr "</a>" }}
+    {{ else }}
+        {{ $attr = printf "%s%s" " by " $attr }}
+    {{ end }}
+{{ end }}
+
+{{ if and $attr (not $desc)}}
+    {{ $preAttr = "Image " }}
+{{ end }}
+
+<figure class="fig">
+    <div class="fig-container">
+        <img class="fig-img" src="{{ $src }}" alt="{{ $desc }}">
+        {{ if or $desc $attr}}
+        <figcaption class="fig-caption">{{ $desc }}{{ $preAttr }}{{ safeHTML $attr }}</figcaption>
+        {{ end }}
+    </div>
+</figure>
+

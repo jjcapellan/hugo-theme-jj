@@ -24,6 +24,7 @@
     * [cover](#cover)
     * [summaryCover](#summaryCover)
     * [math](#math)
+* [Shortcodes]
 
 ## Installation
 1. Before start installation, ensure you have installed an [extended version of Hugo](https://github.com/gohugoio/hugo/releases). You can find help on this topic from [Hugo docs](https://gohugo.io/getting-started/installing/).
@@ -101,4 +102,33 @@ Parses math notation using the javascript library katex.
 Example:
 ```toml
 math = true     # Activates katex
+```
+
+## Shortcodes
+JJ theme at this moment adds one shortcode to the built-in existing ones in Hugo. 
+### fig (figure)
+Inserts images width caption in your posts.
+This shortcode can use positioned or named params. You must use named params when some intermediate param is omitted.
+#### Positioned params:
+1. url of the image (required)
+2. Title or description of the image (optional)
+3. Attribution of the image, author or source (optional)
+4. Attribution link (optional)  
+Examples of all valid uses with positioned params:
+```
+{{< fig "/image1.jpg" Calculator "Clayton Robbins" "https://unsplash.com/@claytonrobbins" >}}
+{{< fig "/image1.jpg" Calculator "Clayton Robbins" >}}
+{{< fig "/image1.jpg" Calculator >}}
+{{< fig "/image1.jpg" >}}
+```
+#### Named params:
+* **src**: url of the image (required)
+* **caption**: Title or description of the image (optional)
+* **attr**: Attribution of the image, author or source (optional)
+* **attrlink**: Attribution link (optional)  
+Example of **some** valid uses with positioned params:
+```
+{{< fig src="/image1.jpg" caption="Calculator" attr="Clayton Robbins" attrlink="https://unsplash.com/@claytonrobbins" >}}
+{{< fig src="/image1.jpg" attr="Clayton Robbins" attrlink="https://unsplash.com/@claytonrobbins" >}}
+{{< fig src="/image1.jpg" attr="Clayton Robbins" >}}
 ```
