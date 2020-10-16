@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="inner-container content-padding">
     {{ range .Paginator.Pages }}
-        {{ if .Title }}
+        {{ if and .Title (not .Params.nolist) }}
             {{ if .Params.summaryCover }}
             <a href="{{ .Permalink }}">
                 <img class="cover-image" src="{{ .Params.summaryCover }}" alt="{{ .Title }}" loading="lazy">

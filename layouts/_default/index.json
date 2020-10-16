@@ -1,19 +1,21 @@
 [
     {{- range $index, $page := .Site.RegularPages -}}
-      {{- if gt $index 0 -}} , {{- end -}}
-      {{- $entry := dict "uri" $page.RelPermalink "title" $page.Title -}}
-      {{- $entry = merge $entry (dict "date" ($page.Date.Format "2006-Jan-02")) -}}
-      {{- $entry = merge $entry (dict "description" $page.Description) -}}
-      {{- $entry = merge $entry (dict "categories" $page.Params.categories) -}}
-      {{- $entry = merge $entry (dict "tags" $page.Params.tags) -}}
-      {{- $contentArray := findRE `<p>(.*|\n|\r)</p>` $page.Content -}}
-      {{- $content := print $contentArray -}}
-      {{- $content = replaceRE `<.*?>` " " $content -}}
-      {{- $content = replaceRE `[^\w]+` " " $content -}}
-      {{- $content = replaceRE `\b\w{1,3}\b` "" $content -}}
-      {{- $content = replaceRE `\s+` "," $content -}}
-      {{- $contentArray = split $content "," -}}
-      {{- $entry = merge $entry (dict "content" $contentArray) -}}
-      {{- $entry | jsonify -}}
+      {{ if not .Params.nolist }}
+        {{- if gt $index 0 -}} , {{- end -}}
+        {{- $entry := dict "uri" $page.RelPermalink "title" $page.Title -}}
+        {{- $entry = merge $entry (dict "date" ($page.Date.Format "2006-Jan-02")) -}}
+        {{- $entry = merge $entry (dict "description" $page.Description) -}}
+        {{- $entry = merge $entry (dict "categories" $page.Params.categories) -}}
+        {{- $entry = merge $entry (dict "tags" $page.Params.tags) -}}
+        {{- $contentArray := findRE `<p>(.*|\n|\r)</p>` $page.Content -}}
+        {{- $content := print $contentArray -}}
+        {{- $content = replaceRE `<.*?>` " " $content -}}
+        {{- $content = replaceRE `[^\w]+` " " $content -}}
+        {{- $content = replaceRE `\b\w{1,3}\b` "" $content -}}
+        {{- $content = replaceRE `\s+` "," $content -}}
+        {{- $contentArray = split $content "," -}}
+        {{- $entry = merge $entry (dict "content" $contentArray) -}}
+        {{- $entry | jsonify -}}
+      {{ end }}
     {{- end -}}
   ]
