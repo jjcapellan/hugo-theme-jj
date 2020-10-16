@@ -24,6 +24,7 @@
     * [cover](#cover)
     * [summaryCover](#summaryCover)
     * [math](#math)
+    * [nolist](#nolist)
 * [Shortcodes](#Shortcodes)
     * [fig (figure)](#fig-(figure))
 
@@ -102,7 +103,13 @@ summaryCover = "http://imagehost.com/image.png"  # external url
 Parses math notation using the javascript library katex.
 Example:
 ```toml
-math = true     # Activates katex
+math = true     # Activates katex (default: false)
+```
+### nolist
+Should the current post appear in the site lists or search results?. This is usefull for "about", "contact",... pages.
+Example:
+```toml
+nolist = true   # Removes this post from lists and search results (default: false)
 ```
 
 ## Shortcodes
