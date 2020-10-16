@@ -20,9 +20,15 @@ $color-thead-bottom-border: $color-link;
 /******************************/
 /*********** COMMON ***********/
 /******************************/
+@font-face {
+  font-family: "Lato-Regular";
+  src: url("/fonts/Lato-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 html {
   background-color: $color-light;
-  font-family: "Lato", "sans-serif";
+  font-family: "Lato-Regular", "sans-serif";
   font-size: $font-size-base;
 }
 html,

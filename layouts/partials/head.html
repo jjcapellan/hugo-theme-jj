@@ -11,7 +11,6 @@
     {{ $css := resources.Get "css/sanitize.css" }}
     {{ $style := $css | resources.Minify }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
     {{ $css = resources.Get "css/styles.scss" }}
     {{ $style = $css | resources.ToCSS | resources.Minify }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
