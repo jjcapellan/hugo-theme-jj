@@ -8,7 +8,6 @@
     {{ if .Site.GoogleAnalytics }}
     {{ template "_internal/google_analytics_async.html" . }}
     {{ end }}
-    <link rel="canonical" href="{{ .Permalink }}" />
     {{ $css := resources.Get "css/sanitize.css" }}
     {{ $style := $css | resources.Minify }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
