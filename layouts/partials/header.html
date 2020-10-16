@@ -1,25 +1,29 @@
 <header id="header" class="container-padding">
     <div id="inner-header" class="inner-container">
         {{ if .Site.Params.brand.logo}}
-        <img id="brand-logo" src="{{ .Site.Params.brand.logo }}" alt="logo">
+            <a href="/">
+                <img id="brand-logo" src="{{ .Site.Params.brand.logo }}" alt="logo">
+            </a>
         {{ end }}
         {{ if .Site.Params.brand.name }}
-        <span id="brand-name">{{ .Site.Params.brand.name }}</span>
+            <a href="/">
+                <span id="brand-name">{{ .Site.Params.brand.name }}</span>
+            </a>
         {{ end }}
         <nav id="header-nav">
             {{ range .Site.Menus.main }}
-            <a href="{{ .URL }}">{{ i18n .Name | default .Name}}</a>            
+                <a href="{{ .URL }}">{{ i18n .Name | default .Name}}</a>            
             {{ end }}
             <a id="more" class="clickable">More</a>
             <div id="submenu" class="submenu-closed"></div>
         </nav>
         {{ if .Site.Params.search.active }}
-        <form id="form-search" action="/search/" method="GET">            
-            <svg id="btsearch" class="header-icon clickable">
-                <use href="/imgs/jj-icons.svg#search"></use>
-            </svg>
-        </form>
-        <input form="form-search" type="text" name="term" id="tbsearch" placeholder="Search...">
+            <form id="form-search" action="/search/" method="GET">            
+                <svg id="btsearch" class="header-icon clickable">
+                    <use href="/imgs/jj-icons.svg#search"></use>
+                </svg>
+            </form>
+            <input form="form-search" type="text" name="term" id="tbsearch" placeholder="Search...">
         {{ end }}
     </div>
 </header>
