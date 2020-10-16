@@ -1,9 +1,9 @@
 +++
-title= "fig shortcode"
+title= "Fig shortcode"
 date= 2020-10-15T13:33:53+02:00
 draft= true                       
 description="Use of shorcode img" 
-tags=["shortcode", "figure"]      
+tags=["shortcodes", "figure"]      
 categories=["hugo"]
 +++
 
