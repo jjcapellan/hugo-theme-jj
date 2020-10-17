@@ -14,7 +14,9 @@ Try the online [**demo**](https://jjcapellan.github.io/demojjtheme/) : https://j
 * Math notation usin katex (optional from each page)
 * No dependencies of css or javascript libraries
 
-![Lighthouse test](./images/lighthousetest.png)
+<p align="center">
+  <img src="images/lighthousetest.png" alt="Lighthouse test"/>
+</p>
 
 ## Table of contents
 * [Installation](#Installation)
