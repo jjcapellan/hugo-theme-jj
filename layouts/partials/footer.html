@@ -4,6 +4,7 @@
           {{ if .name}}
           <a href="{{ .follow_link | safeURL }}">
             <svg class = "social-icon">
+                <title>{{ .name }}</title>
                 <use href="{{ (printf "%s%s" "/imgs/jj-icons.svg#" .name) | relURL }}"></use>
             </svg>
           </a>
