@@ -4,7 +4,7 @@
         {{ if and .Title (not .Params.nolist) }}
             {{ if .Params.summaryCover }}
             <a href="{{ .Permalink }}">
-                <img class="cover-image" src="{{ .Params.summaryCover }}" alt="{{ .Title }}" loading="lazy">
+                <img class="cover-image" src="{{ .Params.summaryCover | relURL }}" alt="{{ .Title }}" loading="lazy">
             </a>
             {{ end }}
             <h2>

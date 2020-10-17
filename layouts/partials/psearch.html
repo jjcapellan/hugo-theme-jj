@@ -82,7 +82,7 @@ search.showResults = function (data, term) {
             let svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
             let use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
             svg.setAttribute('class', 'icon');
-            use.setAttribute('href', '/imgs/jj-icons.svg#tag');
+            use.setAttribute('href', '{{ "/imgs/jj-icons.svg#tag" | relURL }}');
             svg.appendChild(use);
             div.appendChild(svg);
         }
@@ -94,7 +94,7 @@ search.showResults = function (data, term) {
             let tags = page.tags;
             tags.forEach(tag => {
                 let a = document.createElement('a');
-                a.setAttribute('href',`/tags/${tag}`);
+                a.setAttribute('href', "{{ "tags/" | relURL }}" + tag);
                 a.setAttribute('class', 'post-tag');
                 a.innerText = `#${tag}`;
                 div.appendChild(a);
@@ -122,7 +122,7 @@ search.showResults = function (data, term) {
 
 }
 
-fetch('/search.json')
+fetch('{{ "/search.json" | relURL }}')
     .then(response => response.json())
     .then(data => search.showResults(data, search.getParam()));
 

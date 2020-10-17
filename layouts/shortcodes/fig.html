@@ -30,7 +30,7 @@
 
 <figure class="fig">
     <div class="fig-container">
-        <img class="fig-img" src="{{ $src }}" alt="{{ $desc }}">
+        <img class="fig-img" src="{{ $src | relURL }}" alt="{{ $desc }}">
         {{ if or $desc $attr}}
         <figcaption class="fig-caption">{{ $desc }}{{ $preAttr }}{{ safeHTML $attr }}</figcaption>
         {{ end }}

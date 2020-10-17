@@ -1,12 +1,12 @@
 <header id="header" class="container-padding">
     <div id="inner-header" class="inner-container">
         {{ if .Site.Params.brand.logo}}
-            <a href="/">
-                <img id="brand-logo" src="{{ .Site.Params.brand.logo }}" alt="logo">
+            <a href="{{ "/" | relURL }}">
+                <img id="brand-logo" src="{{ .Site.Params.brand.logo | relURL }}" alt="logo">
             </a>
         {{ end }}
         {{ if .Site.Params.brand.name }}
-            <a href="/">
+            <a href="{{ "/" | relURL }}">
                 <span id="brand-name">{{ .Site.Params.brand.name }}</span>
             </a>
         {{ end }}
@@ -18,9 +18,9 @@
             <div id="submenu" class="submenu-closed"></div>
         </nav>
         {{ if .Site.Params.search.active }}
-            <form id="form-search" action="/search/" method="GET">            
+            <form id="form-search" action="{{ "/search/" | relURL }}" method="GET">            
                 <svg id="btsearch" class="header-icon clickable">
-                    <use href="/imgs/jj-icons.svg#search"></use>
+                    <use href="{{ "/imgs/jj-icons.svg#search" | relURL }}"></use>
                 </svg>
             </form>
             <input form="form-search" type="text" name="term" id="tbsearch" placeholder="Search...">
