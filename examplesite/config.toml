@@ -1,16 +1,16 @@
-baseURL = "http://mysite.com/"             # Your site root domain.
-title = "Site title"                       # Site title. Used in head meta tags.
+baseURL = "https://example.com"            # Your site root domain.
+title = "Site Title"                       # Site title. Used in head meta tags.
 copyright = "Copyright © 2020 Your Name"   # Copyright notice.
 
 theme = "jj"                               # Current theme
 
-languageCode = "en-us"
-DefaultContentLanguage = "en"              # User interface language code (currently available translations: en, es)
+languageCode = "es"
+defaultContentLanguage = "en"              # User interface language code (currently available translations: en, es)
 
 googleAnalytics= ""                        # Your google analytics id (ex: UA-12345-Y). Empty value disables it.
 disqusShortname = ""                       # Empty value disables it.
 
-paginate = 10                              # Max number of elements showed in lists.
+paginate = 4                               # Max number of elements showed in lists.
 summaryLength = 70                         # Number of characters taken from the post.
 
 
@@ -37,6 +37,8 @@ summaryLength = 70                         # Number of characters taken from the
 [params]
 
   author = ""                                            # Author name.
+
+  description = "Description of the site"                # Site description
   
   share = ["twitter", "facebook", "linkedin", "reddit"]  # Array of share links. 
                                                          # Possible values: "twitter", "facebook", "linkedin", "reddit".

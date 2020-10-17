@@ -3,13 +3,13 @@ title= "Fig shortcode"
 date= 2020-10-15T13:33:53+02:00
 draft= true                       
 description="Use of shorcode img" 
-tags=["shortcodes", "figure"]      
+tags=["shortcode", "figure"]      
 categories=["hugo"]
 +++
 
-As an alternative to the *figure* built-in shortcode of [Hugo](https://gohugo.io), I've created *fig* shortcode for [JJ theme](https://github.com/jjcapellan/hugo-theme-jj/).<!--more-->
+As an alternative to the **figure** built-in shortcode of [Hugo](https://gohugo.io), I've created a new shortcode more integrated with the [JJ theme](https://github.com/jjcapellan/hugo-theme-jj) and with which you can use both positioned and named parameters.<!--more-->
 
-Here you can see the result of using *fig* shortcode:
+Here you can see the result of using **fig** shortcode:
 {{< fig "/image1.jpg" Calculator "Clayton Robbins" "https://unsplash.com/@claytonrobbins" >}}
 
 This is the shortcode used to generate html above this line:
