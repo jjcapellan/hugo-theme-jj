@@ -1,5 +1,6 @@
 # JJ theme for Hugo
-*JJ* is a simple and light theme for the static site generator [Hugo](https://gohugo.io/).
+*JJ* is a simple and light theme for the static site generator [Hugo](https://gohugo.io/).  
+Try the online [**demo**](https://jjcapellan.github.io/demojjtheme/) : https://jjcapellan.github.io/demojjtheme/ 
 
 ## Features
 * Search engine (optional)
