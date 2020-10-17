@@ -14,6 +14,8 @@ Try the online [**demo**](https://jjcapellan.github.io/demojjtheme/) : https://j
 * Math notation usin katex (optional from each page)
 * No dependencies of css or javascript libraries
 
+![Lighthouse test](./images/lighthousetest.png)
+
 ## Table of contents
 * [Installation](#Installation)
 * [Configuration](#Configuration)
@@ -33,17 +35,16 @@ Try the online [**demo**](https://jjcapellan.github.io/demojjtheme/) : https://j
 1. Before start installation, ensure you have installed an [extended version of Hugo](https://github.com/gohugoio/hugo/releases). You can find help on this topic from [Hugo docs](https://gohugo.io/getting-started/installing/).
 2. Generate a new Hugo site:
 ```
-/$ hugo new site siteName
+hugo new site siteName
 ```
-3. Clone the jj theme repository in your themes folder:
+3. Init your site repository and add jj theme submodule into it:
 ```
-/$ cd siteName/themes
-/sitename/themes$ git clone https://github.com/jjcapellan/hugo-theme-jj jj
+cd siteName
+git submodule add https://github.com/jjcapellan/hugo-theme-jj.git themes/jj
 ```
 4. Copy the config file from theme exampleSite to your site root folder (on windows you must use **copy** command):
 ```
-/sitename/themes$ cd ../
-/sitename$ cp themes/jj/examplesite/config.toml config.toml
+cp themes/jj/examplesite/config.toml config.toml
 ```
 
 ## Configuration
@@ -53,7 +54,9 @@ The variables in config file are commented, so you should'nt have problems.
 * baseURL
 * title
 * copyrigth
-* DefaultContentLanguage 
+* languageCode
+* defaultContentLanguage 
+* description (desciption of your website)
 * Brand name (Optional. Your brand name or site title. Is placed at top-left side to the logo):
 ```toml
 [params.brand]
