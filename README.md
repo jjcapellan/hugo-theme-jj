@@ -67,6 +67,8 @@ The variables in config file are commented, so you should'nt have problems.
 2. Put your logo in **themes/jj/static/imgs/logo.svg**. Or disable it by setting **params.brand.logo = ""** in config file.
 The logo should have 1:1 aspect ratio, and preferably in svg format.
 
+3. Put your favicons in **themes/jj/static/imgs/**: favicon.ico, favicon.png, favicon.svg. At least the ico file is required for this functionality.
+
 ### Search engine
 There are 2 conditions to use this feature:
 1. In the congif file must be activated: 
