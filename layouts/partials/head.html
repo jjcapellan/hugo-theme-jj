@@ -5,9 +5,19 @@
     <meta name="description"
         content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ else }}{{ .Site.Params.description }}{{end }}{{ end }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- icons -->
+    <link rel="icon" type="image/svg+xml" href="{{ "imgs/favicon.svg" | relURL }}">
+    <link rel="alternate icon" href="{{ "imgs/favicon.ico" | relURL }}">
+    <link rel="mask-icon" href="{{ "imgs/favicon.svg" | relURL }}" color="black">
+    <link rel="icon" type="image/png" href="{{ "imgs/favicon.svg" | relURL }}">
+
+    <!-- google analytics -->
     {{ if .Site.GoogleAnalytics }}
         {{ template "_internal/google_analytics_async.html" . }}
     {{ end }}
+
+    <!-- css styles -->
     {{ $css := resources.Get "css/sanitize.css" }}
     {{ $style := $css | resources.Minify }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
@@ -15,5 +25,6 @@
     {{ $style = $css | resources.ToCSS | resources.Minify }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
     
+    <!-- Math render support -->
     {{ partial "katex.html" . }}
 </head>
