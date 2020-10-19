@@ -1,0 +1,11 @@
+{{ $desc := .Get 0 }}
+{{ $align := "right" }}
+{{ if (.Get 1) }}{{ $align = .Get 1 }}{{ end }}
+<div class="scfig">
+<div class="scfig-container">
+{{ .Inner }}
+{{ if $desc}}
+<div class="scfig" style="text-align:{{ $align }};">{{ $desc }}</div>
+{{ end }}
+</div>
+</div>
