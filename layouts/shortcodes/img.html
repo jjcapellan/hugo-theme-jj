@@ -28,11 +28,11 @@
     {{ $preAttr = "Image " }}
 {{ end }}
 
-<figure class="fig">
-    <div class="fig-container">
-        <img class="fig-img" src="{{ $src | relURL }}" alt="{{ $desc }}">
+<figure class="scfig">
+    <div class="scfig-container">
+        <img class="scfig-img" src="{{ $src | relURL }}" alt="{{ $desc }}">
         {{ if or $desc $attr}}
-        <figcaption class="fig-caption">{{ $desc }}{{ $preAttr }}{{ safeHTML $attr }}</figcaption>
+        <figcaption class="scfig-caption">{{ $desc }}{{ $preAttr }}{{ safeHTML $attr }}</figcaption>
         {{ end }}
     </div>
 </figure>

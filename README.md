@@ -31,7 +31,7 @@ Try the online [**demo**](https://jjcapellan.github.io/demojjtheme/) : https://j
     * [math](#math)
     * [nolist](#nolist)
 * [Shortcodes](#Shortcodes)
-    * [fig (figure)](#fig-(figure))
+    * [img (figure)](#img-(figure))
 
 ## Installation
 1. Before start installation, ensure you have installed an [extended version of Hugo](https://github.com/gohugoio/hugo/releases). You can find help on this topic from [Hugo docs](https://gohugo.io/getting-started/installing/).
@@ -122,7 +122,7 @@ nolist = true   # Removes this post from lists and search results (default: fals
 
 ## Shortcodes
 JJ theme at this moment adds one shortcode to the built-in existing ones in Hugo. 
-### fig (figure)
+### img (figure)
 Inserts images width caption in your posts.
 This shortcode can use positioned or named params. You must use named params when some intermediate param is omitted.
 #### Positioned params:
@@ -132,10 +132,10 @@ This shortcode can use positioned or named params. You must use named params whe
 4. Attribution link (optional)  
 Examples of all valid uses with positioned params:
 ```
-{{< fig "/image1.jpg" Calculator "Clayton Robbins" "https://unsplash.com/@claytonrobbins" >}}
-{{< fig "/image1.jpg" Calculator "Clayton Robbins" >}}
-{{< fig "/image1.jpg" Calculator >}}
-{{< fig "/image1.jpg" >}}
+{{< img "/image1.jpg" Calculator "Clayton Robbins" "https://unsplash.com/@claytonrobbins" >}}
+{{< img "/image1.jpg" Calculator "Clayton Robbins" >}}
+{{< img "/image1.jpg" Calculator >}}
+{{< img "/image1.jpg" >}}
 ```
 #### Named params:
 * **src**: url of the image (required)
@@ -144,7 +144,7 @@ Examples of all valid uses with positioned params:
 * **attrlink**: Attribution link (optional)  
 Example of **some** valid uses with positioned params:
 ```
-{{< fig src="/image1.jpg" caption="Calculator" attr="Clayton Robbins" attrlink="https://unsplash.com/@claytonrobbins" >}}
-{{< fig src="/image1.jpg" attr="Clayton Robbins" attrlink="https://unsplash.com/@claytonrobbins" >}}
-{{< fig src="/image1.jpg" attr="Clayton Robbins" >}}
+{{< img src="/image1.jpg" caption="Calculator" attr="Clayton Robbins" attrlink="https://unsplash.com/@claytonrobbins" >}}
+{{< img src="/image1.jpg" attr="Clayton Robbins" attrlink="https://unsplash.com/@claytonrobbins" >}}
+{{< img src="/image1.jpg" attr="Clayton Robbins" >}}
 ```
