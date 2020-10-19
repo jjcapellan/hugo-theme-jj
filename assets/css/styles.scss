@@ -88,7 +88,7 @@ hr {
   opacity: 0.4;
   margin-bottom: 4.5rem;
 }
-pre{
+pre {
   background-color: #e6e6e6;
 }
 table {
@@ -336,37 +336,26 @@ table {
 /******************************/
 /********* SHORTCODES *********/
 /******************************/
-.fig{
+.scfig {
   margin: 1rem 0;
   max-width: $content-width;
-  &-container{
+  &-container {
     margin: 0 auto;
-    background-color: $color-dark;
     padding: 0.2rem;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     max-width: 100%;
   }
-  &-img{
+  &-img {
     max-width: 100%;
   }
-  &-caption{
+  &-caption {
     opacity: 0.8;
     margin-top: 0.2rem;
     width: 0;
     min-width: 100%;
-    color: $color-light;
     font-size: 0.8rem;
-    a{
-      color: $color-light;
-      font-size: bold;
-      text-decoration: underline;
-      &:hover{
-        text-shadow: unset;
-        color: white;
-      }
-    }
   }
 }
 
