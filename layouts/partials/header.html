@@ -1,12 +1,12 @@
 <header id="header" class="container-padding">
     <div id="inner-header" class="inner-container">
         {{ if .Site.Params.brand.logo}}
-            <a href="{{ "/" | relURL }}">
+            <a href="{{ .Site.BaseURL }}">
                 <img id="brand-logo" src="{{ .Site.Params.brand.logo | relURL }}" alt="logo">
             </a>
         {{ end }}
         {{ if .Site.Params.brand.name }}
-            <a href="{{ "/" | relURL }}">
+            <a href="{{ .Site.BaseURL }}">
                 <span id="brand-name">{{ .Site.Params.brand.name }}</span>
             </a>
         {{ end }}
