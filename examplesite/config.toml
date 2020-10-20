@@ -97,6 +97,7 @@ summaryLength = 70                         # Number of characters taken from the
 
 
 [markup]
+  defaultMarkdownHandler = "goldmark"
   [markup.highlight]
     codeFences = true
     guessSyntax = false
@@ -107,6 +108,9 @@ summaryLength = 70                         # Number of characters taken from the
     noClasses = true
     style = "monokai"
     tabWidth = 4
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 
 # Don't change this.
