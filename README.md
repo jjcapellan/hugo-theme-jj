@@ -2,7 +2,7 @@
 <img style="display:block;" alt="Logo JJ" src="https://raw.githubusercontent.com/jjcapellan/hugo-theme-jj/master/static/imgs/logo.svg"/>
 <span style="display:block;font-size: 2.5em; font-weight: bold;">JJ theme for Hugo</span>
 <a href="https://jjcapellan.github.io/demojjtheme/" style="font-size: 1.2em;">Live demo</a>
-<img style="display:block;margin-top:20px;" alt="JJ screen capture 1024x768" src="./images/desktop1024x768.png"/>
+<img style="display:block;margin-top:20px;" alt="JJ screen capture 1024x768" src="https://raw.githubusercontent.com/jjcapellan/hugo-theme-jj/master/images/desktop1024x768.png"/>
 </p>
 
 
