@@ -1,24 +1,12 @@
-# JJ theme for Hugo
-*JJ* is a simple and light theme for the static site generator [Hugo](https://gohugo.io/).  
-Try the online [**demo**](https://jjcapellan.github.io/demojjtheme/) : https://jjcapellan.github.io/demojjtheme/ 
-
-## Features
-* Search engine (optional)
-* Responsive design
-* Multilingual interface (english and spanish).
-* 3 colors schema (customizable)
-* Google analytics support (optional)
-* Disqus comments support (optional)
-* Share buttons (twitter, facebook, linkedin, reddit)
-* Image cover for the post or the summary (optional from each page)
-* Math notation usin katex (optional from each page)
-* No dependencies of css or javascript libraries
-
 <p align="center">
-  <img src="images/lighthousetest.png" alt="Lighthouse test"/>
+<img style="display:block;" alt="Logo JJ" src="https://raw.githubusercontent.com/jjcapellan/hugo-theme-jj/master/static/imgs/logo.svg"/>
+<span style="display:block;font-size: 2.5em; font-weight: bold;">JJ theme for Hugo</span>
+<a href="https://jjcapellan.github.io/demojjtheme/ ">Live demo</a>
 </p>
 
+
 ## Table of contents
+* [Features](#Features)
 * [Installation](#Installation)
 * [Configuration](#Configuration)
     * [Minimum configuration](#Minimum-configuration)
@@ -31,7 +19,21 @@ Try the online [**demo**](https://jjcapellan.github.io/demojjtheme/) : https://j
     * [math](#math)
     * [nolist](#nolist)
 * [Shortcodes](#Shortcodes)
-    * [img (figure)](#img-(figure))
+    * [img](#img)
+    * [tbl](#tbl)
+* [License](#License)  
+
+## Features
+* Search engine (optional)
+* Responsive design
+* Multilingual interface (english and spanish).
+* 3 colors schema (customizable)
+* Google analytics support (optional)
+* Disqus comments support (optional)
+* Share buttons (twitter, facebook, linkedin, reddit)
+* Image cover for the post or the summary (optional from each page)
+* Math notation usin katex (optional from each page)
+* No dependencies of css or javascript libraries
 
 ## Installation
 1. Before start installation, ensure you have installed an [extended version of Hugo](https://github.com/gohugoio/hugo/releases). You can find help on this topic from [Hugo docs](https://gohugo.io/getting-started/installing/).
@@ -122,7 +124,7 @@ nolist = true   # Removes this post from lists and search results (default: fals
 
 ## Shortcodes
 JJ theme at this moment adds one shortcode to the built-in existing ones in Hugo. 
-### img (figure)
+### img
 Inserts images width caption in your posts.
 This shortcode can use positioned or named params. You must use named params when some intermediate param is omitted.
 #### Positioned params:
@@ -148,3 +150,19 @@ Example of **some** valid uses with positioned params:
 {{< img src="/image1.jpg" attr="Clayton Robbins" attrlink="https://unsplash.com/@claytonrobbins" >}}
 {{< img src="/image1.jpg" attr="Clayton Robbins" >}}
 ```
+
+### tbl
+Center and adds caption to tables or other markdown content.
+#### Params:
+1. Caption (optional)
+2. Caption alignment(optional): left(default), right, center
+Example:
+```
+// Caption is optional
+{{% tbl Fig.1 center%}}
+ ...markdown table here
+{{% /tbl %}} 
+```
+
+## License
+This code is released under the [MIT LICENSE](https://raw.githubusercontent.com/jjcapellan/hugo-theme-jj/master/LICENSE)
