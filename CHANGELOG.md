@@ -1,3 +1,11 @@
+## v0.3.0
+### New Features
+* New shortcode *tbl*: adds captions and alignment to markdown tables
+* Added favicons
+### Fixes and little improvements
+ * Reanamed old **fig** shortcode to **img**
+ * Home link uses now BaseURL
+ ---
 ## v0.2.1
 ### Fixes and little improvements
  * Fixed FOIT effect (font-display)
