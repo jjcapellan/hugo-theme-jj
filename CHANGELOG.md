@@ -1,3 +1,6 @@
+## v0.3.2
+### Fixes and little improvements
+* Fix: Search form label visible on page content.
 ## v0.3.1
 ### Fixes and little improvements
 * Fixed: bad close behavior of submenu. Now close when click outside it
