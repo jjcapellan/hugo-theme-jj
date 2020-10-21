@@ -113,6 +113,30 @@ if (document.getElementById('btsearch')) {
         }
     }
 
+    function getBrandWidth(){
+        const logo = document.getElementById('brand-logo');
+        const title = document.getElementById('brand-name');
+        let brandWidth = 0;
+        if(logo){
+            brandWidth += logo.clientWidth;
+        }
+        if(title){
+            brandWidth += Math.round(title.getBoundingClientRect().width);
+        }
+        return brandWidth;
+    }
+
+    function setMediaQuery(){
+        const brandWidth = getBrandWidth();
+        const mediaWidth = brandWidth + 200;
+        const mediaQueryString = `@media only screen and (max-width: ${mediaWidth}px){#inner-header{flex-wrap: wrap;}}`;
+        const styleTag = document.getElementById('media-query');
+
+        styleTag.innerHTML = mediaQueryString;
+    }
+
+    setMediaQuery();
+
     resizeHandler();
     window.addEventListener('resize', resizeHandler);
     more.addEventListener('click', (event) => {

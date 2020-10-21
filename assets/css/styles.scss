@@ -158,7 +158,6 @@ table {
   display: flex;
   position: relative;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   height: 100%;
@@ -171,6 +170,7 @@ table {
 #brand-name {
   flex-shrink: 0;
   padding-right: 1rem;
+  white-space:nowrap;
   color: $color-brand-name;
   font-size: $font-size-brand;
   font-weight: bold;
