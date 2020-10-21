@@ -56,7 +56,7 @@ if (document.getElementById('btsearch')) {
     function generateMenuArray() {
         let allLinks = Array.from(nav.getElementsByTagName('a'));
         const moreWidth = more.clientWidth;
-        const margin = 50;
+        const margin = 100;
         let extraSpace = moreWidth + margin;
         let menuArray = [];
         let previusWidth = 0;
@@ -103,11 +103,24 @@ if (document.getElementById('btsearch')) {
         }
     }
 
+    function outClickHandler(event){
+        let target = event.target;
+        if(target.nodeName != 'A'){
+            console.log(this);
+            submenu.classList.toggle('submenu-open');
+            submenu.classList.toggle('submenu-closed');
+            document.removeEventListener('click', outClickHandler);
+        }
+    }
+
     resizeHandler();
     window.addEventListener('resize', resizeHandler);
     more.addEventListener('click', (event) => {
         event.preventDefault();
         submenu.classList.toggle('submenu-open');
         submenu.classList.toggle('submenu-closed');
+        if(submenu.classList.contains('submenu-open')){
+            document.addEventListener('click', outClickHandler);
+        }
     })
 })()
