@@ -1,3 +1,9 @@
+## v0.3.1
+### Fixes and little improvements
+* Fixed: bad close behavior of submenu. Now close when click outside it
+* Fixed: submenu is behind page contents.
+* Added media-query in function of header elements.
+---
 ## v0.3.0
 ### New Features
 * New shortcode *tbl*: adds captions and alignment to markdown tables
